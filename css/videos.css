@@ -1,0 +1,720 @@
+/* =============================================
+   VIDEOS PAGE STYLES
+   نساء الأقصى الدولية — الفيديو
+   ============================================= */
+
+/* ---- Page Hero ---- */
+.page-hero {
+    position: relative;
+    padding: 160px 0 80px;
+    background: var(--gradient-dark);
+    overflow: hidden;
+    text-align: center;
+}
+
+.page-hero__bg {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/bg-alaqsa.jpg') center/cover no-repeat;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero__content h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: var(--sp-2);
+    line-height: 1.4;
+}
+
+.page-hero__content h1 span {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: var(--sp-1);
+}
+
+.page-hero__content p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: var(--sp-3);
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s var(--ease-out);
+}
+
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.breadcrumb i {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.7rem;
+}
+
+.breadcrumb span {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* ---- Section ---- */
+.section {
+    padding: var(--sp-10) 0;
+}
+
+.section--gray {
+    background: var(--bg-gray);
+}
+
+/* =============================================
+   FEATURED VIDEO SECTION
+   ============================================= */
+.vid-featured-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: box-shadow 0.4s var(--ease-out);
+}
+
+.vid-featured-card:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+/* ---- Video Thumbnail (shared) ---- */
+.vid-thumbnail {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--radius);
+    width: 100%;
+}
+
+.vid-featured-card__thumbnail {
+    border-radius: 0;
+    height: 100%;
+    aspect-ratio: auto;
+}
+
+.vid-featured-card__thumbnail .vid-thumbnail__placeholder {
+    height: 100%;
+}
+
+.vid-thumbnail__placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, var(--bg-gray) 0%, #ede0e7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s var(--ease-out);
+}
+
+.vid-thumbnail__placeholder i {
+    font-size: 5rem;
+    color: rgba(155, 32, 97, 0.15);
+    transition: color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.vid-thumbnail:hover .vid-thumbnail__placeholder {
+    transform: scale(1.03);
+}
+
+.vid-thumbnail:hover .vid-thumbnail__placeholder i {
+    color: rgba(155, 32, 97, 0.25);
+}
+
+/* ---- Featured Play Button ---- */
+.vid-thumbnail__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    width: 64px;
+    height: 64px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.4s var(--ease-out);
+    z-index: 2;
+    box-shadow: 0 4px 24px rgba(197, 25, 138, 0.35);
+}
+
+.vid-thumbnail__play i {
+    margin-right: -2px;
+}
+
+.vid-thumbnail:hover .vid-thumbnail__play {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* ---- Featured Card Body ---- */
+.vid-featured-card__body {
+    padding: var(--sp-5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--sp-2);
+}
+
+.vid-featured-card__badge {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 16px;
+    background: rgba(197, 25, 138, 0.08);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+}
+
+.vid-featured-card__body h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.vid-featured-card__body p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.vid-featured-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.vid-featured-card__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vid-featured-card__meta i {
+    color: var(--accent);
+    font-size: 0.8rem;
+}
+
+.vid-featured-btn {
+    align-self: flex-start;
+    margin-top: var(--sp-1);
+}
+
+/* =============================================
+   VIDEO FILTERS
+   ============================================= */
+.vid-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-1);
+    flex-wrap: wrap;
+    margin-bottom: var(--sp-6);
+}
+
+.vid-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 24px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-pill);
+    background: var(--bg);
+    color: var(--text-light);
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+    font-family: inherit;
+}
+
+.vid-filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(197, 25, 138, 0.05);
+}
+
+.vid-filter-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    box-shadow: 0 4px 16px rgba(197, 25, 138, 0.25);
+}
+
+/* =============================================
+   VIDEO GRID
+   ============================================= */
+.vid-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
+}
+
+/* =============================================
+   VIDEO CARD
+   ============================================= */
+.vid-card {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), opacity 0.4s var(--ease-out);
+}
+
+.vid-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.vid-card.hide {
+    display: none;
+}
+
+.vid-card.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.vid-card.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ---- Card Thumbnail ---- */
+.vid-card__thumbnail {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.vid-card__thumbnail .vid-thumbnail__placeholder {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+}
+
+.vid-card__thumbnail .vid-thumbnail__placeholder i {
+    font-size: 3rem;
+}
+
+.vid-card:hover .vid-thumbnail__placeholder {
+    transform: scale(1.05);
+}
+
+/* ---- Duration Badge ---- */
+.vid-card__duration {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(40, 5, 27, 0.8);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 3;
+    letter-spacing: 0.5px;
+}
+
+/* ---- Card Play Button ---- */
+.vid-card__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    width: 48px;
+    height: 48px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.4s var(--ease-out);
+    z-index: 3;
+    box-shadow: 0 4px 20px rgba(197, 25, 138, 0.35);
+}
+
+.vid-card__play i {
+    margin-right: -2px;
+}
+
+.vid-card:hover .vid-card__play {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* ---- Card Body ---- */
+.vid-card__body {
+    padding: var(--sp-2) var(--sp-3) var(--sp-3);
+}
+
+.vid-card__cat {
+    display: inline-block;
+    padding: 3px 12px;
+    background: rgba(197, 25, 138, 0.08);
+    color: var(--accent);
+    font-size: 0.73rem;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    margin-bottom: var(--sp-1);
+}
+
+.vid-card__body h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0 0 var(--sp-1) 0;
+    line-height: 1.6;
+    transition: color 0.3s var(--ease-out);
+}
+
+.vid-card:hover .vid-card__body h3 {
+    color: var(--accent);
+}
+
+.vid-card__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.vid-card__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vid-card__meta i {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* =============================================
+   VIDEO MODAL
+   ============================================= */
+.vid-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s var(--ease-out), visibility 0.4s var(--ease-out);
+}
+
+.vid-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.vid-modal__content {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.vid-modal__placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-3);
+}
+
+.vid-modal__placeholder i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.vid-modal__placeholder span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.vid-modal__close {
+    position: absolute;
+    top: -50px;
+    right: 5%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s var(--ease-out);
+    z-index: 10;
+}
+
+.vid-modal__close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* =============================================
+   CTA SECTION
+   ============================================= */
+.cta-section {
+    position: relative;
+    padding: var(--sp-10) 0;
+    background: var(--gradient-dark);
+    overflow: hidden;
+    text-align: center;
+}
+
+.cta-section__bg {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/bg-alaqsa.jpg') center/cover no-repeat;
+    opacity: 0.06;
+}
+
+.cta-section__content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section__content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: var(--sp-2);
+}
+
+.cta-section__content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    max-width: 550px;
+    margin: 0 auto var(--sp-4);
+    line-height: 1.8;
+}
+
+.cta-section__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+}
+
+.cta-section__actions .btn {
+    min-width: 180px;
+}
+
+.btn--outline-white {
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    background: transparent;
+    border-radius: var(--radius-pill);
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+}
+
+.btn--outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 1024px) {
+    .vid-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vid-featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .vid-featured-card__thumbnail {
+        aspect-ratio: 16 / 9;
+    }
+
+    .vid-featured-card__body {
+        padding: var(--sp-4);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 120px 0 60px;
+    }
+
+    .page-hero__content h1 {
+        font-size: 2rem;
+    }
+
+    .page-hero__content h1 span {
+        font-size: 1rem;
+    }
+
+    .vid-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-3);
+    }
+
+    .vid-filters {
+        gap: 6px;
+    }
+
+    .vid-filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .vid-featured-card__body {
+        padding: var(--sp-3);
+    }
+
+    .vid-featured-card__body h2 {
+        font-size: 1.25rem;
+    }
+
+    .vid-featured-card__meta {
+        gap: var(--sp-1);
+        font-size: 0.8rem;
+    }
+
+    .section {
+        padding: var(--sp-8) 0;
+    }
+
+    .cta-section__content h2 {
+        font-size: 1.7rem;
+    }
+
+    .vid-modal__close {
+        top: -44px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero {
+        padding: 100px 0 48px;
+    }
+
+    .page-hero__content h1 {
+        font-size: 1.6rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+
+    .vid-featured-card__body {
+        padding: var(--sp-2) var(--sp-3) var(--sp-3);
+    }
+
+    .vid-featured-card__body h2 {
+        font-size: 1.1rem;
+    }
+
+    .vid-featured-card__body p {
+        font-size: 0.88rem;
+    }
+
+    .vid-thumbnail__play {
+        width: 52px;
+        height: 52px;
+        font-size: 1.1rem;
+    }
+
+    .vid-card__play {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .vid-modal__content {
+        width: 95%;
+    }
+
+    .vid-modal__placeholder i {
+        font-size: 3rem;
+    }
+
+    .vid-modal__placeholder span {
+        font-size: 0.95rem;
+    }
+
+    .cta-section {
+        padding: var(--sp-6) 0;
+    }
+
+    .cta-section__content h2 {
+        font-size: 1.4rem;
+    }
+
+    .cta-section__content p {
+        font-size: 0.95rem;
+    }
+}

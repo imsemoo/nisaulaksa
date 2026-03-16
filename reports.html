@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقارير والشفافية | نساء الأقصى الدولية</title>
+    <meta name="description" content="اطلع على التقارير السنوية والمالية وتقارير الأثر لجمعية نساء الأقصى الدولية">
+
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reports.css">
+</head>
+<body>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">عربي</a>
+                    <a href="#">TR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="about.html">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">عن الجمعية</a></li>
+                        <li><a href="about.html#vision">رؤيتنا ورسالتنا</a></li>
+                        <li><a href="about.html#team">الفريق</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="projects.html">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                        <li><a href="projects.html">جميع المشاريع</a></li>
+                    </ul>
+                </li>
+                <li><a href="activities.html">أنشطتنا</a></li>
+                <li><a href="media.html">المركز الإعلامي</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="donate.html" class="btn btn--donate pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                <button class="navbar__toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content" data-aos="fade-up">
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>التقارير والشفافية</span>
+                </nav>
+                <h1>التقارير والشفافية <span>نلتزم بالشفافية الكاملة في عملنا</span></h1>
+                <p>اطلع على تقاريرنا السنوية والمالية وتقارير الأثر لمعرفة كيف نستثمر تبرعاتكم</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TRANSPARENCY COMMITMENT ============ -->
+    <section class="section rpt-commitment">
+        <div class="container">
+            <div class="rpt-commitment__card" data-aos="fade-up">
+                <div class="rpt-commitment__icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <div class="rpt-commitment__text">
+                    <h3>التزامنا بالشفافية</h3>
+                    <p>نؤمن بأن الشفافية هي أساس الثقة. لذلك نلتزم بنشر جميع تقاريرنا المالية وتقارير الأثر بشكل دوري، ونخضع للمراجعة من قبل مؤسسات مستقلة لضمان أعلى معايير النزاهة والمساءلة.</p>
+                    <div class="rpt-commitment__badges">
+                        <span class="rpt-commitment__badge"><i class="fas fa-check-circle"></i> مُراجَع من جهة مستقلة</span>
+                        <span class="rpt-commitment__badge"><i class="fas fa-calendar"></i> تقارير ربع سنوية</span>
+                        <span class="rpt-commitment__badge"><i class="fas fa-sync"></i> بيانات محدّثة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ IMPACT STATISTICS ============ -->
+    <section class="section rpt-impact" id="rptImpact">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">أرقام وإنجازات</span>
+                <h2 class="section__title">أثرنا بالأرقام</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="rpt-impact__grid" data-aos="fade-up">
+                <div class="rpt-impact__item">
+                    <div class="rpt-impact__icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="rpt-impact__number" data-target="2500000" data-prefix="$">0</div>
+                    <div class="rpt-impact__label">إجمالي التبرعات</div>
+                </div>
+                <div class="rpt-impact__item">
+                    <div class="rpt-impact__icon"><i class="fas fa-users"></i></div>
+                    <div class="rpt-impact__number" data-target="150000">0</div>
+                    <div class="rpt-impact__label">مستفيد</div>
+                </div>
+                <div class="rpt-impact__item">
+                    <div class="rpt-impact__icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="rpt-impact__number" data-target="85">0</div>
+                    <div class="rpt-impact__label">مشروع منفّذ</div>
+                </div>
+                <div class="rpt-impact__item">
+                    <div class="rpt-impact__icon"><i class="fas fa-globe-africa"></i></div>
+                    <div class="rpt-impact__number" data-target="12">0</div>
+                    <div class="rpt-impact__label">دولة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINANCIAL REPORTS ============ -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">التقارير المالية</span>
+                <h2 class="section__title">تقاريرنا المالية</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="rpt-grid">
+
+                <!-- Report 1 -->
+                <div class="rpt-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="rpt-card__top">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="rpt-card__body">
+                        <span class="rpt-card__year">2023</span>
+                        <h3>التقرير السنوي 2023</h3>
+                        <p>تقرير شامل عن أنشطة ومشاريع الجمعية خلال عام 2023</p>
+                        <div class="rpt-card__file"><i class="fas fa-file"></i> PDF — 3.2 MB</div>
+                        <button class="rpt-card__download"><i class="fas fa-download"></i> تحميل التقرير</button>
+                    </div>
+                </div>
+
+                <!-- Report 2 -->
+                <div class="rpt-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="rpt-card__top">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="rpt-card__body">
+                        <span class="rpt-card__year">2023</span>
+                        <h3>تقرير الشفافية المالية 2023</h3>
+                        <p>البيانات المالية المدققة والمراجعة من جهة مستقلة</p>
+                        <div class="rpt-card__file"><i class="fas fa-file"></i> PDF — 2.1 MB</div>
+                        <button class="rpt-card__download"><i class="fas fa-download"></i> تحميل التقرير</button>
+                    </div>
+                </div>
+
+                <!-- Report 3 -->
+                <div class="rpt-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rpt-card__top">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="rpt-card__body">
+                        <span class="rpt-card__year">2023</span>
+                        <h3>تقرير الأثر 2023</h3>
+                        <p>قياس أثر المشاريع والبرامج على المستفيدين</p>
+                        <div class="rpt-card__file"><i class="fas fa-file"></i> PDF — 4.5 MB</div>
+                        <button class="rpt-card__download"><i class="fas fa-download"></i> تحميل التقرير</button>
+                    </div>
+                </div>
+
+                <!-- Report 4 -->
+                <div class="rpt-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="rpt-card__top">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="rpt-card__body">
+                        <span class="rpt-card__year">2022</span>
+                        <h3>التقرير السنوي 2022</h3>
+                        <p>ملخص شامل لإنجازات وأنشطة عام 2022</p>
+                        <div class="rpt-card__file"><i class="fas fa-file"></i> PDF — 2.8 MB</div>
+                        <button class="rpt-card__download"><i class="fas fa-download"></i> تحميل التقرير</button>
+                    </div>
+                </div>
+
+                <!-- Report 5 -->
+                <div class="rpt-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rpt-card__top">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="rpt-card__body">
+                        <span class="rpt-card__year">2022</span>
+                        <h3>تقرير الشفافية المالية 2022</h3>
+                        <p>البيانات المالية المدققة لعام 2022</p>
+                        <div class="rpt-card__file"><i class="fas fa-file"></i> PDF — 1.9 MB</div>
+                        <button class="rpt-card__download"><i class="fas fa-download"></i> تحميل التقرير</button>
+                    </div>
+                </div>
+
+                <!-- Report 6 -->
+                <div class="rpt-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="rpt-card__top">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="rpt-card__body">
+                        <span class="rpt-card__year">2024</span>
+                        <h3>تقرير حملة إغاثة غزة</h3>
+                        <p>تقرير مفصل عن حملة إغاثة غزة: التبرعات والتوزيع والأثر</p>
+                        <div class="rpt-card__file"><i class="fas fa-file"></i> PDF — 5.1 MB</div>
+                        <button class="rpt-card__download"><i class="fas fa-download"></i> تحميل التقرير</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SPENDING BREAKDOWN ============ -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">أين تذهب تبرعاتكم</span>
+                <h2 class="section__title">توزيع الإنفاق</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="rpt-breakdown" data-aos="fade-up" id="rptBreakdown">
+                <div class="rpt-breakdown__bar">
+                    <div class="rpt-breakdown__segment" data-width="45" style="background: var(--accent);"></div>
+                    <div class="rpt-breakdown__segment" data-width="25" style="background: var(--orange);"></div>
+                    <div class="rpt-breakdown__segment" data-width="15" style="background: var(--gold);"></div>
+                    <div class="rpt-breakdown__segment" data-width="10" style="background: var(--text-muted);"></div>
+                    <div class="rpt-breakdown__segment" data-width="5" style="background: var(--border);"></div>
+                </div>
+                <div class="rpt-breakdown__legend">
+                    <div class="rpt-breakdown__legend-item">
+                        <span class="rpt-breakdown__dot" style="background: var(--accent);"></span>
+                        <span>البرامج والمشاريع: 45%</span>
+                    </div>
+                    <div class="rpt-breakdown__legend-item">
+                        <span class="rpt-breakdown__dot" style="background: var(--orange);"></span>
+                        <span>الإغاثة الطارئة: 25%</span>
+                    </div>
+                    <div class="rpt-breakdown__legend-item">
+                        <span class="rpt-breakdown__dot" style="background: var(--gold);"></span>
+                        <span>التعليم والتدريب: 15%</span>
+                    </div>
+                    <div class="rpt-breakdown__legend-item">
+                        <span class="rpt-breakdown__dot" style="background: var(--text-muted);"></span>
+                        <span>المصاريف الإدارية: 10%</span>
+                    </div>
+                    <div class="rpt-breakdown__legend-item">
+                        <span class="rpt-breakdown__dot" style="background: var(--border);"></span>
+                        <span>جمع التبرعات: 5%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TRUST BADGES ============ -->
+    <section class="section section--gray rpt-trust">
+        <div class="container">
+            <div class="rpt-trust__grid" data-aos="fade-up">
+                <div class="rpt-trust__item">
+                    <div class="rpt-trust__icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>مراجعة مستقلة</h3>
+                    <p>تخضع حساباتنا لمراجعة سنوية من مؤسسة تدقيق مستقلة</p>
+                </div>
+                <div class="rpt-trust__item">
+                    <div class="rpt-trust__icon"><i class="fas fa-certificate"></i></div>
+                    <h3>معتمدون دولياً</h3>
+                    <p>معتمدون من جهات رقابية محلية ودولية</p>
+                </div>
+                <div class="rpt-trust__item">
+                    <div class="rpt-trust__icon"><i class="fas fa-lock"></i></div>
+                    <h3>أمان البيانات</h3>
+                    <p>نلتزم بحماية بياناتكم الشخصية وفق أعلى المعايير</p>
+                </div>
+                <div class="rpt-trust__item">
+                    <div class="rpt-trust__icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>90% للمشاريع</h3>
+                    <p>أكثر من 90% من التبرعات تذهب مباشرة للمستفيدين</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta">
+        <div class="cta__bg"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2>كن شريكًا في صناعة الأثر</h2>
+                <p>تبرعك يساهم في استمرار أنشطتنا ومشاريعنا التي تصل إلى آلاف المستفيدين حول العالم</p>
+                <div class="cta__btns">
+                    <a href="donate.html" class="btn btn--donate btn--lg pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    <a href="contact.html" class="btn btn--outline-light btn--lg"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية — نعمل على دعم المرأة والطفل في المناطق المحتاجة وتقديم يد العون للأسر المتضررة.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="activities.html">أنشطتنا</a></li>
+                            <li><a href="media.html">المركز الإعلامي</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="#">الإغاثة الطارئة</a></li>
+                            <li><a href="#">التعليم والتدريب</a></li>
+                            <li><a href="#">التمكين الاقتصادي</a></li>
+                            <li><a href="#">المشاريع الصحية</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك لتصلك آخر أخبارنا وقصص النجاح</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                جميع الحقوق محفوظة &copy; 2024 نساء الأقصى الدولية | Aksa Kadınları Derneği
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ============ FLOATING DONATE (mobile) ============ -->
+    <a href="donate.html" class="floating-donate"><i class="fas fa-heart"></i> تبرع الآن</a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/reports.js"></script>
+</body>
+</html>

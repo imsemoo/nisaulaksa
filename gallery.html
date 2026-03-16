@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور | نساء الأقصى الدولية</title>
+    <meta name="description" content="معرض صور أنشطة ومشاريع جمعية نساء الأقصى الدولية">
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">عربي</a>
+                    <a href="#">TR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="about.html">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">عن الجمعية</a></li>
+                        <li><a href="about.html#vision">رؤيتنا ورسالتنا</a></li>
+                        <li><a href="about.html#team">الفريق</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="projects.html">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                        <li><a href="projects.html">جميع المشاريع</a></li>
+                    </ul>
+                </li>
+                <li><a href="activities.html">أنشطتنا</a></li>
+                <li><a href="media.html">المركز الإعلامي</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="donate.html" class="btn btn--donate pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                <button class="navbar__toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content" data-aos="fade-up">
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <a href="media.html">المركز الإعلامي</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>معرض الصور</span>
+                </nav>
+                <h1>معرض الصور <span>لحظات من أنشطتنا الميدانية</span></h1>
+                <p>استعرض مجموعة من الصور التي توثق أنشطتنا ومشاريعنا في مختلف المجالات الإنسانية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY STATS BAR -->
+    <section class="gallery-stats">
+        <div class="container">
+            <div class="gallery-stats__inner">
+                <div class="gallery-stats__item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="gallery-stats__number" data-target="250">0</div>
+                    <div class="gallery-stats__label">صورة +</div>
+                </div>
+                <div class="gallery-stats__item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-stats__number" data-target="12">0</div>
+                    <div class="gallery-stats__label">ألبوم</div>
+                </div>
+                <div class="gallery-stats__item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-stats__number" data-target="8">0</div>
+                    <div class="gallery-stats__label">دول</div>
+                </div>
+                <div class="gallery-stats__item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-stats__number" data-target="45">0</div>
+                    <div class="gallery-stats__label">فعالية +</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY FILTER + GRID -->
+    <section class="section section--gray">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="gallery-filters" data-aos="fade-up">
+                <button class="gallery-filter-btn active" data-filter="all">الكل</button>
+                <button class="gallery-filter-btn" data-filter="relief">حملات إغاثة</button>
+                <button class="gallery-filter-btn" data-filter="events">فعاليات</button>
+                <button class="gallery-filter-btn" data-filter="field">أنشطة ميدانية</button>
+                <button class="gallery-filter-btn" data-filter="education">تعليم</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Item 1 -->
+                <div class="gallery-item" data-category="relief">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 280px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>توزيع المساعدات في غزة</h4>
+                            <span class="gallery-item__cat">حملات إغاثة</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item" data-category="education">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 220px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>افتتاح مدرسة جديدة</h4>
+                            <span class="gallery-item__cat">تعليم</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 300px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>حفل تكريم الأيتام</h4>
+                            <span class="gallery-item__cat">فعاليات</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item" data-category="field">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 240px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>زيارة ميدانية للمخيمات</h4>
+                            <span class="gallery-item__cat">أنشطة ميدانية</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item" data-category="relief">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 260px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>توزيع الطرود الغذائية</h4>
+                            <span class="gallery-item__cat">حملات إغاثة</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item" data-category="education">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 200px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>ورشة تدريب المعلمات</h4>
+                            <span class="gallery-item__cat">تعليم</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 280px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>مؤتمر نساء الأقصى الدولي</h4>
+                            <span class="gallery-item__cat">فعاليات</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="gallery-item" data-category="field">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 320px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>مشروع المياه النظيفة</h4>
+                            <span class="gallery-item__cat">أنشطة ميدانية</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="gallery-item" data-category="relief">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 240px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>حملة كسوة الشتاء</h4>
+                            <span class="gallery-item__cat">حملات إغاثة</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="gallery-item" data-category="education">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 260px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>برنامج محو الأمية</h4>
+                            <span class="gallery-item__cat">تعليم</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 11 -->
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 220px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>يوم المرأة العالمي</h4>
+                            <span class="gallery-item__cat">فعاليات</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 12 -->
+                <div class="gallery-item" data-category="field">
+                    <div class="gallery-item__wrap">
+                        <div class="gallery-item__placeholder" style="height: 300px;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <h4>بناء وحدات سكنية</h4>
+                            <span class="gallery-item__cat">أنشطة ميدانية</span>
+                        </div>
+                        <div class="gallery-item__zoom">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox__close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev"><i class="fas fa-chevron-right"></i></button>
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox__content">
+            <div class="lightbox__image" id="lightboxImage">
+                <i class="fas fa-image"></i>
+            </div>
+            <div class="lightbox__caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-section__bg"></div>
+        <div class="container">
+            <div class="cta-section__content" data-aos="fade-up">
+                <h2>كن جزءاً من التغيير</h2>
+                <p>ساهم معنا في دعم المشاريع الإنسانية وصنع الفرق في حياة الآلاف من المحتاجين</p>
+                <div class="cta-section__actions">
+                    <a href="donate.html" class="btn btn--primary btn--lg"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    <a href="volunteer.html" class="btn btn--outline-white btn--lg"><i class="fas fa-hands-helping"></i> تطوع معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية — نعمل على دعم المرأة والطفل في المناطق المحتاجة وتقديم يد العون للأسر المتضررة.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="projects.html">مشاريعنا</a></li>
+                            <li><a href="activities.html">أنشطتنا</a></li>
+                            <li><a href="news.html">الأخبار</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="projects.html">الإغاثة الطارئة</a></li>
+                            <li><a href="projects.html">التعليم والتدريب</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك لتصلك آخر أخبارنا وقصص النجاح</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                جميع الحقوق محفوظة &copy; 2024 نساء الأقصى الدولية | Aksa Kadınları Derneği
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+    <a href="donate.html" class="floating-donate"><i class="fas fa-heart"></i> تبرع الآن</a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

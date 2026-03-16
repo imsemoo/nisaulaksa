@@ -1,0 +1,316 @@
+/* ============================================
+   error.css — 404 Error Page Styles
+   نساء الأقصى الدولية
+   ============================================ */
+
+/* ---- Error Section ---- */
+.error-section {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    padding: var(--sp-10) 0;
+    background: var(--bg-gray);
+}
+
+.error-content {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ---- 404 Illustration ---- */
+.error-illustration {
+    margin-bottom: var(--sp-5);
+}
+
+.error-illustration__bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-3);
+}
+
+.error-illustration__number {
+    font-size: clamp(6rem, 15vw, 10rem);
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.error-illustration__icon {
+    width: clamp(70px, 12vw, 100px);
+    height: clamp(70px, 12vw, 100px);
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3rem);
+    box-shadow: 0 8px 32px rgba(197, 25, 138, 0.3);
+    animation: float 3s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ---- Text ---- */
+.error-content h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-2);
+}
+
+.error-content > p {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: var(--sp-4);
+    max-width: 520px;
+    margin-inline: auto;
+}
+
+/* ---- Search Box ---- */
+.error-search {
+    display: flex;
+    max-width: 440px;
+    margin: 0 auto var(--sp-4);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+    border: 2px solid var(--border);
+    background: #fff;
+    transition: border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.error-search:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(197, 25, 138, 0.1);
+}
+
+.error-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: transparent;
+    color: var(--text);
+}
+
+.error-search input::placeholder {
+    color: var(--text-muted);
+}
+
+.error-search button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s var(--ease-out);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-search button:hover {
+    background: var(--primary);
+}
+
+/* ---- Action Buttons ---- */
+.error-btns {
+    display: flex;
+    justify-content: center;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+    margin-bottom: var(--sp-6);
+}
+
+.btn--outline {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+    padding: 12px 28px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn--outline:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* ---- Helpful Links ---- */
+.error-links {
+    margin-top: var(--sp-4);
+}
+
+.error-links h3 {
+    font-size: 1.1rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: var(--sp-3);
+}
+
+.error-links__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-2);
+}
+
+.error-links__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: var(--sp-3);
+    background: #fff;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s var(--ease-out);
+}
+
+.error-links__item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.error-links__item i {
+    font-size: 1.3rem;
+    color: var(--accent);
+    transition: transform 0.3s var(--ease-out);
+}
+
+.error-links__item:hover i {
+    transform: scale(1.15);
+}
+
+/* ---- Pulse animation for 404 numbers ---- */
+@keyframes numberPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.85;
+        transform: scale(1.03);
+    }
+}
+
+.error-illustration__number.animate {
+    animation: numberPulse 2.5s ease-in-out infinite;
+}
+
+/* ---- Redirect Toast ---- */
+.error-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #fff;
+    padding: 14px 24px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.4s var(--ease-out);
+    font-size: 0.95rem;
+    max-width: 90%;
+    border-right: 4px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+}
+
+.error-toast.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.error-toast i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .error-links__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .error-illustration__number {
+        font-size: clamp(4rem, 12vw, 6rem);
+    }
+
+    .error-illustration__icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    .error-section {
+        padding: var(--sp-6) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-links__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .error-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .error-btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .error-illustration__bg {
+        gap: var(--sp-1);
+    }
+
+    .error-illustration__number {
+        font-size: clamp(3.5rem, 10vw, 5rem);
+    }
+
+    .error-illustration__icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.6rem;
+    }
+
+    .error-search {
+        max-width: 100%;
+    }
+}
