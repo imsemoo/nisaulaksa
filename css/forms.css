@@ -1,0 +1,868 @@
+/* ============================================
+   صفحات النماذج - Forms Pages
+   Volunteer, Contact & FAQ
+   Uses main style.css design tokens
+   ============================================ */
+
+/* ---- PAGE HERO (inner pages) ---- */
+.page-hero {
+    position: relative;
+    padding: 100px 0 80px;
+    overflow: hidden;
+}
+
+.page-hero__bg {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-dark);
+}
+
+.page-hero__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/bg-alaqsa.jpg') center/cover;
+    opacity: 0.08;
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+/* ---- BREADCRUMB ---- */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: var(--sp-3);
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.breadcrumb i {
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumb span {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.page-hero__content h1 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--sp-2);
+}
+
+.page-hero__content h1 span {
+    display: block;
+    color: var(--gold);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* ============================================
+   VOLUNTEER PAGE
+   ============================================ */
+
+/* ---- Benefits Grid ---- */
+.vol-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-4);
+    margin-top: var(--sp-6);
+}
+
+.vol-benefit-card {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--sp-5) var(--sp-4);
+    text-align: center;
+    transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+
+.vol-benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.vol-benefit-card__icon {
+    width: 72px;
+    height: 72px;
+    background: var(--bg-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--sp-3);
+    font-size: 1.5rem;
+    color: var(--accent);
+    transition: all 0.35s var(--ease-out);
+}
+
+.vol-benefit-card:hover .vol-benefit-card__icon {
+    background: var(--gradient);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.vol-benefit-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: var(--sp-1);
+}
+
+.vol-benefit-card p {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* ---- Volunteer Form Layout ---- */
+.vol-form-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--sp-5);
+    margin-top: var(--sp-6);
+    align-items: start;
+}
+
+.vol-form-card {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--sp-5);
+}
+
+.vol-form-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-2);
+    border-bottom: 2px solid var(--border);
+}
+
+/* ---- Shared Form Input Styles ---- */
+.form-group {
+    margin-bottom: var(--sp-3);
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: var(--sp-1);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px var(--sp-2);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.92rem;
+    transition: border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(197, 25, 138, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23888' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 14px center;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.8;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+}
+
+/* ---- Form Submit Button ---- */
+.form-submit {
+    width: 100%;
+    padding: 14px var(--sp-4);
+    background: var(--gradient-warm);
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-1);
+    transition: all 0.25s var(--ease-out);
+    margin-top: var(--sp-2);
+}
+
+.form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(242, 119, 33, 0.3);
+}
+
+.form-submit i {
+    font-size: 0.9rem;
+}
+
+/* ---- Volunteer Info Card (sidebar) ---- */
+.vol-info-card {
+    background: var(--gradient-dark);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-5);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.vol-info-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/bg-alaqsa.jpg') center/cover;
+    opacity: 0.08;
+}
+
+.vol-info-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.vol-info-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: var(--sp-2);
+}
+
+.vol-info-card > p {
+    font-size: 0.92rem;
+    line-height: 1.9;
+    opacity: 0.85;
+    font-weight: 300;
+    margin-bottom: var(--sp-4);
+}
+
+.vol-info-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+}
+
+.vol-info-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    padding: var(--sp-2) var(--sp-3);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vol-info-stat__icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient-warm);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--dark);
+    flex-shrink: 0;
+}
+
+.vol-info-stat__text strong {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.vol-info-stat__text span {
+    font-size: 0.82rem;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+
+/* ---- Contact Info Cards Grid ---- */
+.contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-4);
+    margin-top: var(--sp-6);
+}
+
+.contact-info-card {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--sp-5) var(--sp-3);
+    text-align: center;
+    transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+    border-top: 3px solid transparent;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+    border-top-color: var(--accent);
+}
+
+.contact-info-card__icon {
+    width: 64px;
+    height: 64px;
+    background: var(--bg-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--sp-3);
+    font-size: 1.3rem;
+    color: var(--accent);
+    transition: all 0.35s var(--ease-out);
+}
+
+.contact-info-card:hover .contact-info-card__icon {
+    background: var(--gradient);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.contact-info-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: var(--sp-1);
+}
+
+.contact-info-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.contact-info-card a {
+    color: var(--text-light);
+    transition: color 0.2s;
+}
+
+.contact-info-card a:hover {
+    color: var(--accent);
+}
+
+/* ---- Contact Layout ---- */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--sp-5);
+    margin-top: var(--sp-6);
+    align-items: start;
+}
+
+.contact-form-card {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--sp-5);
+    border: 1px solid var(--border);
+}
+
+.contact-form-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-2);
+    border-bottom: 2px solid var(--border);
+}
+
+/* ---- Contact Map Placeholder ---- */
+.contact-map {
+    background: var(--bg-gray);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2);
+    border: 2px dashed var(--border);
+    color: var(--text-muted);
+    transition: border-color 0.3s var(--ease-out);
+}
+
+.contact-map:hover {
+    border-color: var(--accent);
+}
+
+.contact-map__icon {
+    width: 80px;
+    height: 80px;
+    background: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.contact-map p {
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   FAQ PAGE
+   ============================================ */
+
+/* ---- FAQ Category Grid ---- */
+.faq-cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-4);
+    margin-top: var(--sp-6);
+}
+
+.faq-cat-card {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--sp-5) var(--sp-3);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), border-color 0.35s;
+    border: 2px solid transparent;
+}
+
+.faq-cat-card:hover,
+.faq-cat-card.active {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--accent);
+}
+
+.faq-cat-card__icon {
+    width: 64px;
+    height: 64px;
+    background: var(--bg-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--sp-2);
+    font-size: 1.3rem;
+    color: var(--accent);
+    transition: all 0.35s var(--ease-out);
+}
+
+.faq-cat-card:hover .faq-cat-card__icon,
+.faq-cat-card.active .faq-cat-card__icon {
+    background: var(--gradient);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.faq-cat-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* ---- FAQ Filter Buttons ---- */
+.faq-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--sp-1);
+    flex-wrap: wrap;
+    margin-bottom: var(--sp-5);
+}
+
+.faq-filter-btn {
+    padding: 9px 22px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-pill);
+    background: var(--bg);
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 0.87rem;
+    cursor: pointer;
+    transition: all 0.25s var(--ease-out);
+    font-family: inherit;
+}
+
+.faq-filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.faq-filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+/* ---- FAQ Accordion Items ---- */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.faq-item.hidden {
+    display: none;
+}
+
+.faq-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--sp-3) var(--sp-2);
+    cursor: pointer;
+    transition: color 0.25s var(--ease-out);
+    gap: var(--sp-2);
+}
+
+.faq-item__header:hover {
+    color: var(--accent);
+}
+
+.faq-item__header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.6;
+    transition: color 0.25s;
+    flex: 1;
+}
+
+.faq-item__header:hover h3,
+.faq-item.active .faq-item__header h3 {
+    color: var(--accent);
+}
+
+.faq-item__header i {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    transition: transform 0.35s var(--ease-out), color 0.25s;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-item__header i {
+    transform: rotate(180deg);
+    color: var(--accent);
+}
+
+.faq-item__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease-out);
+}
+
+.faq-item.active .faq-item__body {
+    max-height: 500px;
+}
+
+.faq-item__body p {
+    padding: 0 var(--sp-2) var(--sp-3);
+    font-size: 0.92rem;
+    line-height: 2;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* ---- FAQ Contact Card ---- */
+.faq-contact-card {
+    background: var(--bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--sp-6) var(--sp-5);
+    text-align: center;
+    max-width: 600px;
+    margin: var(--sp-6) auto 0;
+}
+
+.faq-contact-card__icon {
+    width: 72px;
+    height: 72px;
+    background: var(--bg-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--sp-3);
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.faq-contact-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-1);
+}
+
+.faq-contact-card p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    font-weight: 300;
+    margin-bottom: var(--sp-3);
+    line-height: 1.9;
+}
+
+/* ---- CTA SECTION ---- */
+.cta {
+    position: relative;
+    padding: 112px 0;
+    overflow: hidden;
+}
+
+.cta__bg {
+    position: absolute;
+    inset: 0;
+    background: var(--dark);
+}
+
+.cta__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/bg-alaqsa.jpg') center/cover;
+    opacity: 0.1;
+}
+
+.cta__content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.cta__content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--sp-3);
+    line-height: 1.3;
+}
+
+.cta__content p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    line-height: 2;
+    margin-bottom: var(--sp-5);
+    font-weight: 300;
+}
+
+.cta__btns {
+    display: flex;
+    gap: var(--sp-2);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* ---- 1024px ---- */
+@media (max-width: 1024px) {
+    .vol-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vol-form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- 768px ---- */
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 60px;
+    }
+
+    .vol-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-3);
+    }
+
+    .vol-benefit-card {
+        padding: var(--sp-4) var(--sp-3);
+    }
+
+    .vol-form-card,
+    .contact-form-card {
+        padding: var(--sp-4);
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-3);
+    }
+
+    .contact-map {
+        min-height: 300px;
+    }
+
+    .faq-cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-3);
+    }
+
+    .faq-filters {
+        gap: 6px;
+    }
+
+    .faq-filter-btn {
+        padding: 7px 14px;
+        font-size: 0.82rem;
+    }
+
+    .cta__content h2 {
+        font-size: 1.6rem;
+    }
+
+    .floating-donate {
+        display: flex;
+    }
+}
+
+/* ---- 480px ---- */
+@media (max-width: 480px) {
+    .page-hero {
+        padding: 70px 0 50px;
+    }
+
+    .vol-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vol-benefit-card__icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-card__icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.1rem;
+    }
+
+    .faq-cat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-cat-card {
+        padding: var(--sp-3) var(--sp-2);
+    }
+
+    .faq-item__header {
+        padding: var(--sp-2) var(--sp-1);
+    }
+
+    .faq-item__header h3 {
+        font-size: 0.92rem;
+    }
+
+    .faq-contact-card {
+        padding: var(--sp-4) var(--sp-3);
+    }
+
+    .vol-info-card {
+        padding: var(--sp-4);
+    }
+
+    .vol-info-stat {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--sp-1);
+    }
+
+    .vol-form-card,
+    .contact-form-card {
+        padding: var(--sp-3);
+    }
+
+    .contact-map {
+        min-height: 280px;
+    }
+}

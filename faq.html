@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة | نساء الأقصى الدولية</title>
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">عربي</a>
+                    <a href="#">TR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="about.html">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">عن الجمعية</a></li>
+                        <li><a href="about.html#vision">رؤيتنا ورسالتنا</a></li>
+                        <li><a href="about.html#team">الفريق</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="projects.html">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                        <li><a href="projects.html">جميع المشاريع</a></li>
+                    </ul>
+                </li>
+                <li><a href="activities.html">أنشطتنا</a></li>
+                <li><a href="media.html">المركز الإعلامي</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="donate.html" class="btn btn--donate pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                <button class="navbar__toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content" data-aos="fade-up">
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>الأسئلة الشائعة</span>
+                </div>
+                <h1>الأسئلة الشائعة
+                    <span>إجابات لأكثر الأسئلة شيوعاً</span>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ CATEGORIES ============ -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">تصفح حسب الفئة</span>
+                <h2 class="section__title">فئات الأسئلة</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="faq-cat-grid">
+                <div class="faq-cat-card" data-cat="about" data-aos="fade-up" data-aos-delay="0">
+                    <div class="faq-cat-card__icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>عن الجمعية</h3>
+                </div>
+                <div class="faq-cat-card" data-cat="donations" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-cat-card__icon">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3>التبرعات</h3>
+                </div>
+                <div class="faq-cat-card" data-cat="orphans" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-cat-card__icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>كفالة الأيتام</h3>
+                </div>
+                <div class="faq-cat-card" data-cat="volunteer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-cat-card__icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>التطوع</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ACCORDION ============ -->
+    <section class="section" id="faqAccordion">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">نجيب على تساؤلاتكم</span>
+                <h2 class="section__title">الأسئلة الأكثر شيوعاً</h2>
+                <div class="section__line"></div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="faq-filters" data-aos="fade-up">
+                <button class="faq-filter-btn active" data-filter="all">الكل</button>
+                <button class="faq-filter-btn" data-filter="about">عن الجمعية</button>
+                <button class="faq-filter-btn" data-filter="donations">التبرعات</button>
+                <button class="faq-filter-btn" data-filter="orphans">كفالة الأيتام</button>
+                <button class="faq-filter-btn" data-filter="volunteer">التطوع</button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-list" data-aos="fade-up">
+
+                <!-- === عن الجمعية === -->
+                <div class="faq-item" data-category="about">
+                    <div class="faq-item__header">
+                        <h3>ما هي جمعية نساء الأقصى الدولية؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>جمعية نساء الأقصى الدولية هي منظمة إنسانية غير ربحية تأسست بهدف دعم المرأة والطفل في المناطق المحتاجة حول العالم. تعمل الجمعية على تنفيذ مشاريع إغاثية وتعليمية وتنموية في عدة دول، مع التركيز على تمكين المرأة ورعاية الأيتام وتقديم المساعدات الإنسانية للأسر المتضررة من الأزمات والنزاعات.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="about">
+                    <div class="faq-item__header">
+                        <h3>أين يقع مقر الجمعية؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>يقع المقر الرئيسي لجمعية نساء الأقصى الدولية في مدينة شانلي أورفا بتركيا. كما تمتلك الجمعية مكاتب تنسيقية وفرق عمل ميدانية في عدة دول حول العالم لتنفيذ مشاريعها الإنسانية والوصول إلى أكبر عدد من المستفيدين.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="about">
+                    <div class="faq-item__header">
+                        <h3>هل الجمعية مرخصة رسمياً؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>نعم، جمعية نساء الأقصى الدولية مرخصة رسمياً وفقاً للقوانين التركية المنظمة لعمل الجمعيات والمنظمات غير الربحية. تخضع الجمعية للرقابة المالية والإدارية من الجهات الرسمية المعنية، وتلتزم بمعايير الشفافية والحوكمة في جميع أنشطتها ومشاريعها.</p>
+                    </div>
+                </div>
+
+                <!-- === التبرعات === -->
+                <div class="faq-item" data-category="donations">
+                    <div class="faq-item__header">
+                        <h3>كيف يمكنني التبرع؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>يمكنك التبرع بعدة طرق سهلة وآمنة: عبر موقعنا الإلكتروني باستخدام بطاقة الائتمان أو الخصم المباشر، أو من خلال التحويل البنكي إلى حسابات الجمعية الرسمية، أو عن طريق زيارة مكاتبنا شخصياً. كما يمكنك التواصل معنا هاتفياً للاستفسار عن طرق التبرع المتاحة في بلدك.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="donations">
+                    <div class="faq-item__header">
+                        <h3>هل تبرعاتي تصل بالكامل للمستفيدين؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>نلتزم بأعلى معايير الشفافية في إدارة التبرعات. يتم توجيه الجزء الأكبر من تبرعك مباشرة إلى المشروع الذي اخترته، مع تخصيص نسبة محدودة جداً لتغطية التكاليف الإدارية والتشغيلية اللازمة لضمان وصول المساعدات بكفاءة. نقدم تقارير دورية مفصلة عن كيفية إنفاق التبرعات.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="donations">
+                    <div class="faq-item__header">
+                        <h3>هل يمكنني استرداد تبرعي؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>بشكل عام، لا يمكن استرداد التبرعات بعد تخصيصها للمشاريع، حيث يتم صرفها مباشرة على المستفيدين. ومع ذلك، في حالات استثنائية وإذا لم يتم صرف التبرع بعد، يمكنك التواصل مع فريق الدعم لمناقشة حالتك الخاصة وسنبذل قصارى جهدنا لمساعدتك.</p>
+                    </div>
+                </div>
+
+                <!-- === كفالة الأيتام === -->
+                <div class="faq-item" data-category="orphans">
+                    <div class="faq-item__header">
+                        <h3>كيف يعمل برنامج كفالة الأيتام؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>برنامج كفالة الأيتام يتيح لك رعاية يتيم من خلال دعم مالي شهري يغطي احتياجاته الأساسية من غذاء وملبس وتعليم ورعاية صحية. يتم اختيار الأيتام بعناية من خلال فرقنا الميدانية، ونوفر لك تقارير دورية عن حالة اليتيم المكفول وتطوره الدراسي والصحي.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="orphans">
+                    <div class="faq-item__header">
+                        <h3>ما هي تكلفة كفالة يتيم؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>تختلف تكلفة الكفالة حسب الدولة ومستوى المعيشة فيها، وتبدأ من مبالغ ميسّرة شهرياً تغطي الاحتياجات الأساسية لليتيم. يمكنك زيارة صفحة كفالة الأيتام للاطلاع على التفاصيل المحدّثة، أو التواصل معنا للحصول على معلومات أكثر تفصيلاً حسب الدولة المستهدفة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="orphans">
+                    <div class="faq-item__header">
+                        <h3>هل يمكنني التواصل مع اليتيم المكفول؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>نعم، نحرص على بناء علاقة تواصل بين الكافل واليتيم المكفول. نوفر تقارير دورية تتضمن صوراً ومعلومات عن اليتيم، كما يمكنك إرسال رسائل وهدايا له من خلالنا. في بعض الحالات وحسب الظروف الميدانية، يمكن ترتيب زيارات شخصية بالتنسيق مع فرقنا المحلية.</p>
+                    </div>
+                </div>
+
+                <!-- === التطوع === -->
+                <div class="faq-item" data-category="volunteer">
+                    <div class="faq-item__header">
+                        <h3>كيف أتطوع مع الجمعية؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>يمكنك التطوع معنا بسهولة من خلال زيارة صفحة التطوع على موقعنا وملء نموذج التسجيل بمعلوماتك الشخصية ومهاراتك وخبراتك. سيقوم فريقنا بمراجعة طلبك والتواصل معك لتحديد المجال الأنسب لمهاراتك ورغباتك ضمن مشاريعنا المختلفة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="volunteer">
+                    <div class="faq-item__header">
+                        <h3>هل التطوع متاح عن بُعد؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>نعم، لدينا العديد من فرص التطوع عن بُعد في مجالات متنوعة مثل التصميم الجرافيكي، الترجمة، كتابة المحتوى، إدارة وسائل التواصل الاجتماعي، البرمجة وتطوير المواقع، والتدريب والتعليم عن بُعد. نرحب بالمتطوعين من جميع أنحاء العالم.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="volunteer">
+                    <div class="faq-item__header">
+                        <h3>ما المؤهلات المطلوبة للتطوع؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-item__body">
+                        <p>نرحب بجميع الراغبين في التطوع بغض النظر عن مؤهلاتهم الأكاديمية أو خبراتهم المهنية. الشرط الأساسي هو الرغبة الصادقة في العطاء والالتزام بالمهام الموكلة إليك. نوفر برامج تدريبية وتأهيلية للمتطوعين الجدد لتمكينهم من أداء مهامهم بكفاءة وفعالية.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Still Have Questions CTA -->
+            <div class="faq-contact-card" data-aos="fade-up">
+                <div class="faq-contact-card__icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>لم تجد إجابتك؟</h3>
+                <p>لا تتردد في التواصل معنا مباشرة وسنسعد بمساعدتك والإجابة على جميع استفساراتك.</p>
+                <a href="contact.html" class="btn btn--primary btn--lg"><i class="fas fa-envelope"></i> تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta">
+        <div class="cta__bg"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2>لم تجد إجابتك؟</h2>
+                <p>تواصل معنا مباشرة وسنسعد بمساعدتك</p>
+                <div class="cta__btns">
+                    <a href="donate.html" class="btn btn--donate btn--lg pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    <a href="contact.html" class="btn btn--outline-light btn--lg"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية — نعمل على دعم المرأة والطفل في المناطق المحتاجة وتقديم يد العون للأسر المتضررة.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="projects.html">مشاريعنا</a></li>
+                            <li><a href="activities.html">أنشطتنا</a></li>
+                            <li><a href="news.html">الأخبار</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="projects.html">الإغاثة الطارئة</a></li>
+                            <li><a href="projects.html">التعليم والتدريب</a></li>
+                            <li><a href="projects.html">التمكين الاقتصادي</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك لتصلك آخر أخبارنا وقصص النجاح</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                جميع الحقوق محفوظة &copy; 2024 نساء الأقصى الدولية | Aksa Kadınları Derneği
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+    <a href="donate.html" class="floating-donate"><i class="fas fa-heart"></i> تبرع الآن</a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

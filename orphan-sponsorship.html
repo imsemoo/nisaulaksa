@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اكفل يتيمًا | نساء الأقصى الدولية</title>
+    <meta name="description" content="اكفل يتيمًا وامنحه حياة كريمة - برنامج كفالة الأيتام من جمعية نساء الأقصى الدولية">
+
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/orphan.css">
+</head>
+<body>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">عربي</a>
+                    <a href="#">TR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="#">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="index.html#about">عن الجمعية</a></li>
+                        <li><a href="#">رؤيتنا ورسالتنا</a></li>
+                        <li><a href="#">الفريق</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#" class="active">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                        <li><a href="index.html#projects">التعليم</a></li>
+                        <li><a href="index.html#projects">الإغاثة</a></li>
+                        <li><a href="index.html#projects">التمكين الاقتصادي</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#campaigns">الحملات</a></li>
+                <li><a href="index.html#news">الأخبار</a></li>
+                <li><a href="index.html#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="#sponsorship-plans" class="btn btn--donate pulse-btn"><i class="fas fa-hand-holding-heart"></i> اكفل الآن</a>
+                <button class="navbar__toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content" data-aos="fade-up">
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <a href="index.html#projects">مشاريعنا</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>كفالة الأيتام</span>
+                </nav>
+                <h1>اكفل يتيمًا <span>وامنحه حياة كريمة</span></h1>
+                <p>«أنا وكافل اليتيم في الجنة كهاتين» — كن سببًا في رسم ابتسامة على وجه يتيم</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ IMPACT STATS ============ -->
+    <section class="orphan-stats" id="orphanStats">
+        <div class="container">
+            <div class="orphan-stats__grid" data-aos="fade-up">
+                <div class="orphan-stats__item">
+                    <div class="orphan-stats__icon"><i class="fas fa-child"></i></div>
+                    <div class="orphan-stats__number" data-target="2450">0</div>
+                    <div class="orphan-stats__label">يتيم مكفول</div>
+                </div>
+                <div class="orphan-stats__item">
+                    <div class="orphan-stats__icon"><i class="fas fa-globe-africa"></i></div>
+                    <div class="orphan-stats__number" data-target="8">0</div>
+                    <div class="orphan-stats__label">دولة نعمل فيها</div>
+                </div>
+                <div class="orphan-stats__item">
+                    <div class="orphan-stats__icon"><i class="fas fa-users"></i></div>
+                    <div class="orphan-stats__number" data-target="1200">0</div>
+                    <div class="orphan-stats__label">كافل نشط</div>
+                </div>
+                <div class="orphan-stats__item">
+                    <div class="orphan-stats__icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="orphan-stats__number" data-target="680">0</div>
+                    <div class="orphan-stats__label">يتيم في التعليم</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section section--gray how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">كيف تبدأ؟</span>
+                <h2 class="section__title">ثلاث خطوات بسيطة لكفالة يتيم</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-card__number">01</div>
+                    <div class="step-card__icon"><i class="fas fa-hand-pointer"></i></div>
+                    <h3>اختر نوع الكفالة</h3>
+                    <p>حدد مستوى الدعم المناسب لك: أساسي أو تعليمي أو شامل</p>
+                </div>
+                <div class="step-card__connector" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card__number">02</div>
+                    <div class="step-card__icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>أتمم عملية التبرع</h3>
+                    <p>أكمل بياناتك وادفع بشكل آمن عبر طرق الدفع المتاحة</p>
+                </div>
+                <div class="step-card__connector" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card__number">03</div>
+                    <div class="step-card__icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>تابع أثر كفالتك</h3>
+                    <p>احصل على تقارير دورية عن حالة اليتيم الذي تكفله وتطوره</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SPONSORSHIP PLANS ============ -->
+    <section class="section sponsorship-plans" id="sponsorship-plans">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">خطط الكفالة</span>
+                <h2 class="section__title">اختر خطة الكفالة المناسبة</h2>
+                <div class="section__line"></div>
+                <p class="section__desc">كل خطة مصممة لتلبية احتياجات مختلفة — اختر ما يناسبك وكن جزءًا من التغيير</p>
+            </div>
+            <div class="plans-grid">
+
+                <!-- Basic Plan -->
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="plan-card__header">
+                        <div class="plan-card__icon"><i class="fas fa-heart"></i></div>
+                        <h3>الكفالة الأساسية</h3>
+                        <p class="plan-card__desc">الاحتياجات الأساسية من غذاء وكساء</p>
+                    </div>
+                    <div class="plan-card__price">
+                        <span class="plan-card__amount">$50</span>
+                        <span class="plan-card__period">/ شهريًا</span>
+                    </div>
+                    <ul class="plan-card__features">
+                        <li><i class="fas fa-check"></i> وجبات غذائية يومية</li>
+                        <li><i class="fas fa-check"></i> كسوة موسمية</li>
+                        <li><i class="fas fa-check"></i> رعاية صحية أولية</li>
+                        <li><i class="fas fa-check"></i> تقرير ربع سنوي</li>
+                        <li class="plan-card__feature--muted"><i class="fas fa-times"></i> الدعم التعليمي</li>
+                        <li class="plan-card__feature--muted"><i class="fas fa-times"></i> الأنشطة الترفيهية</li>
+                    </ul>
+                    <a href="donate.html?plan=basic&amount=50" class="btn btn--outline-dark btn--full btn--lg plan-card__btn">اكفل الآن</a>
+                </div>
+
+                <!-- Education Plan (Popular) -->
+                <div class="plan-card plan-card--featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plan-card__badge">الأكثر اختيارًا</div>
+                    <div class="plan-card__header">
+                        <div class="plan-card__icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>كفالة تعليمية</h3>
+                        <p class="plan-card__desc">تعليم شامل مع رعاية أساسية</p>
+                    </div>
+                    <div class="plan-card__price">
+                        <span class="plan-card__amount">$100</span>
+                        <span class="plan-card__period">/ شهريًا</span>
+                    </div>
+                    <ul class="plan-card__features">
+                        <li><i class="fas fa-check"></i> وجبات غذائية يومية</li>
+                        <li><i class="fas fa-check"></i> كسوة موسمية</li>
+                        <li><i class="fas fa-check"></i> رعاية صحية أولية</li>
+                        <li><i class="fas fa-check"></i> تقرير شهري مفصل</li>
+                        <li><i class="fas fa-check"></i> رسوم مدرسية كاملة</li>
+                        <li><i class="fas fa-check"></i> مستلزمات تعليمية</li>
+                    </ul>
+                    <a href="donate.html?plan=education&amount=100" class="btn btn--donate btn--full btn--lg plan-card__btn pulse-btn">اكفل الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- Full Care Plan -->
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plan-card__header">
+                        <div class="plan-card__icon"><i class="fas fa-house-chimney-medical"></i></div>
+                        <h3>الكفالة الشاملة</h3>
+                        <p class="plan-card__desc">رعاية متكاملة لحياة أفضل</p>
+                    </div>
+                    <div class="plan-card__price">
+                        <span class="plan-card__amount">$200</span>
+                        <span class="plan-card__period">/ شهريًا</span>
+                    </div>
+                    <ul class="plan-card__features">
+                        <li><i class="fas fa-check"></i> جميع مميزات الكفالة التعليمية</li>
+                        <li><i class="fas fa-check"></i> رعاية صحية شاملة</li>
+                        <li><i class="fas fa-check"></i> دعم نفسي واجتماعي</li>
+                        <li><i class="fas fa-check"></i> أنشطة ترفيهية ورحلات</li>
+                        <li><i class="fas fa-check"></i> تقرير شهري + صور + فيديو</li>
+                        <li><i class="fas fa-check"></i> تواصل مباشر مع اليتيم</li>
+                    </ul>
+                    <a href="donate.html?plan=full&amount=200" class="btn btn--outline-dark btn--full btn--lg plan-card__btn">اكفل الآن</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ORPHAN PROFILES ============ -->
+    <section class="section section--gray orphan-profiles" id="orphan-profiles">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">أيتام بانتظار كفالتك</span>
+                <h2 class="section__title">تعرّف على أيتامنا</h2>
+                <div class="section__line"></div>
+                <p class="section__desc">كل يتيم يستحق فرصة — اختر يتيمًا واصنع فرقًا حقيقيًا في حياته</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="orphan-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="palestine">فلسطين</button>
+                <button class="filter-btn" data-filter="syria">سوريا</button>
+                <button class="filter-btn" data-filter="yemen">اليمن</button>
+                <button class="filter-btn" data-filter="turkey">تركيا</button>
+            </div>
+
+            <!-- Orphan Cards Grid -->
+            <div class="orphan-grid">
+
+                <div class="orphan-card" data-country="palestine" data-aos="fade-up" data-aos-delay="0">
+                    <div class="orphan-card__image">
+                        <div class="orphan-card__placeholder">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <span class="orphan-card__tag orphan-card__tag--urgent">عاجل</span>
+                        <span class="orphan-card__age">8 سنوات</span>
+                    </div>
+                    <div class="orphan-card__body">
+                        <div class="orphan-card__info">
+                            <h3>أحمد م.</h3>
+                            <span class="orphan-card__location"><i class="fas fa-map-marker-alt"></i> غزة، فلسطين</span>
+                        </div>
+                        <p class="orphan-card__story">فقد أحمد والديه في الحرب ويحتاج إلى رعاية شاملة ودعم تعليمي لمواصلة حياته</p>
+                        <div class="orphan-card__needs">
+                            <span class="need-tag"><i class="fas fa-utensils"></i> غذاء</span>
+                            <span class="need-tag"><i class="fas fa-book"></i> تعليم</span>
+                            <span class="need-tag"><i class="fas fa-heartbeat"></i> صحة</span>
+                        </div>
+                        <a href="donate.html?orphan=1&amount=100" class="btn btn--primary btn--full">اكفل أحمد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="orphan-card" data-country="syria" data-aos="fade-up" data-aos-delay="50">
+                    <div class="orphan-card__image">
+                        <div class="orphan-card__placeholder">
+                            <i class="fas fa-child-dress"></i>
+                        </div>
+                        <span class="orphan-card__age">6 سنوات</span>
+                    </div>
+                    <div class="orphan-card__body">
+                        <div class="orphan-card__info">
+                            <h3>فاطمة ع.</h3>
+                            <span class="orphan-card__location"><i class="fas fa-map-marker-alt"></i> إدلب، سوريا</span>
+                        </div>
+                        <p class="orphan-card__story">طفلة يتيمة تعيش مع جدتها في مخيم للنازحين وتحلم بالعودة للمدرسة</p>
+                        <div class="orphan-card__needs">
+                            <span class="need-tag"><i class="fas fa-utensils"></i> غذاء</span>
+                            <span class="need-tag"><i class="fas fa-book"></i> تعليم</span>
+                        </div>
+                        <a href="donate.html?orphan=2&amount=100" class="btn btn--primary btn--full">اكفل فاطمة <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="orphan-card" data-country="yemen" data-aos="fade-up" data-aos-delay="100">
+                    <div class="orphan-card__image">
+                        <div class="orphan-card__placeholder">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <span class="orphan-card__age">10 سنوات</span>
+                    </div>
+                    <div class="orphan-card__body">
+                        <div class="orphan-card__info">
+                            <h3>محمد ي.</h3>
+                            <span class="orphan-card__location"><i class="fas fa-map-marker-alt"></i> صنعاء، اليمن</span>
+                        </div>
+                        <p class="orphan-card__story">يتيم الأب ويعيل أسرته المكونة من أم و3 أخوات — يحتاج لدعم تعليمي عاجل</p>
+                        <div class="orphan-card__needs">
+                            <span class="need-tag"><i class="fas fa-book"></i> تعليم</span>
+                            <span class="need-tag"><i class="fas fa-tshirt"></i> كساء</span>
+                        </div>
+                        <a href="donate.html?orphan=3&amount=100" class="btn btn--primary btn--full">اكفل محمد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="orphan-card" data-country="palestine" data-aos="fade-up" data-aos-delay="150">
+                    <div class="orphan-card__image">
+                        <div class="orphan-card__placeholder">
+                            <i class="fas fa-child-dress"></i>
+                        </div>
+                        <span class="orphan-card__tag orphan-card__tag--new">جديد</span>
+                        <span class="orphan-card__age">5 سنوات</span>
+                    </div>
+                    <div class="orphan-card__body">
+                        <div class="orphan-card__info">
+                            <h3>نور ح.</h3>
+                            <span class="orphan-card__location"><i class="fas fa-map-marker-alt"></i> رفح، فلسطين</span>
+                        </div>
+                        <p class="orphan-card__story">فقدت عائلتها بالكامل وتعيش حاليًا في رعاية خالتها — تحتاج رعاية شاملة</p>
+                        <div class="orphan-card__needs">
+                            <span class="need-tag"><i class="fas fa-utensils"></i> غذاء</span>
+                            <span class="need-tag"><i class="fas fa-heartbeat"></i> صحة</span>
+                            <span class="need-tag"><i class="fas fa-home"></i> مأوى</span>
+                        </div>
+                        <a href="donate.html?orphan=4&amount=100" class="btn btn--primary btn--full">اكفل نور <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="orphan-card" data-country="turkey" data-aos="fade-up" data-aos-delay="200">
+                    <div class="orphan-card__image">
+                        <div class="orphan-card__placeholder">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <span class="orphan-card__age">9 سنوات</span>
+                    </div>
+                    <div class="orphan-card__body">
+                        <div class="orphan-card__info">
+                            <h3>عمر ك.</h3>
+                            <span class="orphan-card__location"><i class="fas fa-map-marker-alt"></i> غازي عنتاب، تركيا</span>
+                        </div>
+                        <p class="orphan-card__story">لاجئ سوري فقد والده — يتفوق في المدرسة ويحتاج لدعم لمواصلة تعليمه</p>
+                        <div class="orphan-card__needs">
+                            <span class="need-tag"><i class="fas fa-book"></i> تعليم</span>
+                            <span class="need-tag"><i class="fas fa-utensils"></i> غذاء</span>
+                        </div>
+                        <a href="donate.html?orphan=5&amount=100" class="btn btn--primary btn--full">اكفل عمر <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <div class="orphan-card" data-country="syria" data-aos="fade-up" data-aos-delay="250">
+                    <div class="orphan-card__image">
+                        <div class="orphan-card__placeholder">
+                            <i class="fas fa-child-dress"></i>
+                        </div>
+                        <span class="orphan-card__age">7 سنوات</span>
+                    </div>
+                    <div class="orphan-card__body">
+                        <div class="orphan-card__info">
+                            <h3>ريم ص.</h3>
+                            <span class="orphan-card__location"><i class="fas fa-map-marker-alt"></i> حلب، سوريا</span>
+                        </div>
+                        <p class="orphan-card__story">يتيمة الأبوين تعيش مع عائلة كافلة — تحب الرسم وتحتاج رعاية نفسية</p>
+                        <div class="orphan-card__needs">
+                            <span class="need-tag"><i class="fas fa-brain"></i> دعم نفسي</span>
+                            <span class="need-tag"><i class="fas fa-book"></i> تعليم</span>
+                        </div>
+                        <a href="donate.html?orphan=6&amount=100" class="btn btn--primary btn--full">اكفل ريم <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="orphan-profiles__more" data-aos="fade-up">
+                <button class="btn btn--outline-dark btn--lg" id="loadMoreOrphans">
+                    <i class="fas fa-plus"></i> عرض المزيد من الأيتام
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SPONSORSHIP CALCULATOR ============ -->
+    <section class="section sponsor-calculator" id="sponsor-calculator">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">احسب كفالتك</span>
+                <h2 class="section__title">صمّم كفالتك الخاصة</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="calculator-card" data-aos="fade-up">
+                <div class="calculator-card__body">
+                    <div class="calc-row">
+                        <div class="calc-field">
+                            <label>عدد الأيتام</label>
+                            <div class="qty-control">
+                                <button class="qty-btn" data-action="decrease"><i class="fas fa-minus"></i></button>
+                                <span class="qty-value" id="orphanQty">1</span>
+                                <button class="qty-btn" data-action="increase"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="calc-field">
+                            <label>نوع الكفالة</label>
+                            <div class="calc-plan-selector">
+                                <button class="calc-plan-btn active" data-plan="basic" data-price="50">أساسية <span>$50</span></button>
+                                <button class="calc-plan-btn" data-plan="education" data-price="100">تعليمية <span>$100</span></button>
+                                <button class="calc-plan-btn" data-plan="full" data-price="200">شاملة <span>$200</span></button>
+                            </div>
+                        </div>
+                        <div class="calc-field">
+                            <label>مدة الكفالة</label>
+                            <div class="calc-duration-selector">
+                                <button class="calc-dur-btn active" data-months="1">شهر</button>
+                                <button class="calc-dur-btn" data-months="6">6 أشهر</button>
+                                <button class="calc-dur-btn" data-months="12">سنة</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc-summary">
+                        <div class="calc-summary__detail">
+                            <span>الكفالة الشهرية:</span>
+                            <strong id="calcMonthly">$50</strong>
+                        </div>
+                        <div class="calc-summary__total">
+                            <span>الإجمالي:</span>
+                            <strong id="calcTotal">$50</strong>
+                        </div>
+                        <a href="donate.html" class="btn btn--donate btn--full btn--lg" id="calcDonateBtn">
+                            <i class="fas fa-hand-holding-heart"></i> تبرع الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section section--gray sponsor-testimonials">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">قصص نجاح</span>
+                <h2 class="section__title">ماذا يقول كفلاؤنا؟</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-card__quote"><i class="fas fa-quote-right"></i></div>
+                    <p>أكفل يتيمة في غزة منذ سنتين، والتقارير الدورية التي أتلقاها تجعلني أشعر بالاطمئنان. شعور رائع أن ترى أثر مساهمتك.</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar"><i class="fas fa-user"></i></div>
+                        <div>
+                            <strong>سارة م.</strong>
+                            <span>كافلة منذ 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card__quote"><i class="fas fa-quote-right"></i></div>
+                    <p>الكفالة التعليمية غيّرت حياة الطفل الذي أكفله — أصبح متفوقًا في مدرسته والحمد لله. أنصح الجميع بالمشاركة.</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar"><i class="fas fa-user"></i></div>
+                        <div>
+                            <strong>أحمد ت.</strong>
+                            <span>كافل منذ 2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card__quote"><i class="fas fa-quote-right"></i></div>
+                    <p>اخترت الكفالة الشاملة لعائلة يتيمة في سوريا. التواصل المباشر مع الأسرة يمنحني دافعًا للاستمرار كل شهر.</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar"><i class="fas fa-user"></i></div>
+                        <div>
+                            <strong>ليلى ك.</strong>
+                            <span>كافلة منذ 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section orphan-faq" id="faq">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">أسئلة شائعة</span>
+                <h2 class="section__title">كل ما تريد معرفته عن الكفالة</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="faq-list" data-aos="fade-up">
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        <span>كيف أتأكد أن تبرعي يصل لليتيم؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>نقدم تقارير دورية مفصلة تتضمن صورًا وتحديثات عن حالة اليتيم. كما يمكنك زيارة مكاتبنا الميدانية للتأكد بنفسك. نعمل بشفافية كاملة وفقًا لمعايير المحاسبة الدولية.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        <span>هل يمكنني التواصل مع اليتيم الذي أكفله؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>نعم! في خطة الكفالة الشاملة، يمكنك التواصل مباشرة مع اليتيم عبر فريقنا الميداني. كما نوفر رسائل وصور دورية في جميع الخطط.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        <span>هل يمكنني إلغاء الكفالة في أي وقت؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>بالطبع. الكفالة هي تبرع طوعي يمكنك إيقافه أو تعديله في أي وقت من خلال حسابك أو بالتواصل مع فريق الدعم.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        <span>ما هي الدول التي يشملها برنامج الكفالة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>نعمل حاليًا في فلسطين وسوريا واليمن وتركيا ولبنان والأردن والعراق والسودان. ونعمل على توسيع نطاق عملنا ليشمل دولًا أخرى.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        <span>هل التبرع معفى من الضرائب؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>نعم، جمعية نساء الأقصى الدولية مسجلة رسميًا ويمكنك الحصول على إيصال ضريبي لتبرعاتك. تواصل معنا للحصول على التفاصيل.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta">
+        <div class="cta__bg"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2>ابدأ رحلة الكفالة اليوم</h2>
+                <p>يتيم واحد يمكنه تغيير العالم إذا وجد من يهتم به — كن أنت هذا الشخص</p>
+                <div class="cta__btns">
+                    <a href="#sponsorship-plans" class="btn btn--donate btn--lg pulse-btn"><i class="fas fa-hand-holding-heart"></i> اكفل يتيمًا الآن</a>
+                    <a href="index.html#contact" class="btn btn--outline-light btn--lg"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية — نعمل على دعم المرأة والطفل في المناطق المحتاجة وتقديم يد العون للأسر المتضررة.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="index.html#about">من نحن</a></li>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="index.html#campaigns">الحملات</a></li>
+                            <li><a href="index.html#news">الأخبار</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="#">الإغاثة الطارئة</a></li>
+                            <li><a href="#">التعليم والتدريب</a></li>
+                            <li><a href="#">التمكين الاقتصادي</a></li>
+                            <li><a href="#">المشاريع الصحية</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك لتصلك آخر أخبارنا وقصص النجاح</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                جميع الحقوق محفوظة &copy; 2024 نساء الأقصى الدولية | Aksa Kadınları Derneği
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ============ FLOATING DONATE (mobile) ============ -->
+    <a href="#sponsorship-plans" class="floating-donate"><i class="fas fa-hand-holding-heart"></i> اكفل الآن</a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/orphan.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنشطتنا | نساء الأقصى الدولية</title>
+    <meta name="description" content="تعرّف على أنشطة جمعية نساء الأقصى الدولية في مجالات التعليم والإغاثة والتمكين المجتمعي">
+
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/activities.css">
+</head>
+<body>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">عربي</a>
+                    <a href="#">TR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="about.html">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">عن الجمعية</a></li>
+                        <li><a href="about.html#vision">رؤيتنا ورسالتنا</a></li>
+                        <li><a href="about.html#team">الفريق</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                        <li><a href="#">التعليم</a></li>
+                        <li><a href="#">الإغاثة</a></li>
+                    </ul>
+                </li>
+                <li><a href="activities.html" class="active">أنشطتنا</a></li>
+                <li><a href="media.html">المركز الإعلامي</a></li>
+                <li><a href="index.html#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="donate.html" class="btn btn--donate pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                <button class="navbar__toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content" data-aos="fade-up">
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>أنشطتنا</span>
+                </nav>
+                <h1>أنشطتنا <span>نعمل بجهد لصناعة التغيير</span></h1>
+                <p>نسعى من خلال أنشطتنا المتنوعة إلى تقديم الدعم الشامل للمجتمعات المحتاجة في مجالات التعليم والإغاثة والتمكين والتوعية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ACTIVITIES FILTER + GRID ============ -->
+    <section class="section section--gray act-section" id="activities">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">ماذا نفعل</span>
+                <h2 class="section__title">استعرض أنشطتنا</h2>
+                <div class="section__line"></div>
+                <p class="section__desc">نعمل في مجالات متعددة لتقديم أفضل الخدمات والبرامج التي تُحدث أثرًا حقيقيًا في حياة المستفيدين</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="act-filters" data-aos="fade-up">
+                <button class="act-filter-btn active" data-filter="all">الكل</button>
+                <button class="act-filter-btn" data-filter="education">تعليم</button>
+                <button class="act-filter-btn" data-filter="relief">إغاثة</button>
+                <button class="act-filter-btn" data-filter="community">مجتمع</button>
+                <button class="act-filter-btn" data-filter="conferences">مؤتمرات</button>
+                <button class="act-filter-btn" data-filter="awareness">توعية</button>
+            </div>
+
+            <!-- Activities Grid -->
+            <div class="act-grid">
+
+                <!-- Card 1: التعليم والتدريب -->
+                <div class="activity-grid-card" data-category="education" data-aos="fade-up" data-aos-delay="0">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">تعليم</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-graduation-cap"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>التعليم والتدريب</h3>
+                        <p>نقدم برامج تعليمية وتدريبية شاملة تهدف إلى تطوير مهارات الأفراد وبناء قدراتهم لمواجهة تحديات الحياة.</p>
+                        <a href="#" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2: الإغاثة الطارئة -->
+                <div class="activity-grid-card" data-category="relief" data-aos="fade-up" data-aos-delay="50">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-truck-medical"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">إغاثة</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-truck-medical"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>الإغاثة الطارئة</h3>
+                        <p>نتدخل بسرعة لتقديم المساعدات الإنسانية العاجلة للمتضررين من الأزمات والكوارث والحروب في المناطق المنكوبة.</p>
+                        <a href="#" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3: البرامج المجتمعية -->
+                <div class="activity-grid-card" data-category="community" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-people-group"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">مجتمع</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-people-group"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>البرامج المجتمعية</h3>
+                        <p>ننفذ برامج مجتمعية متكاملة تستهدف تمكين الأسر والنساء وتعزيز التماسك الاجتماعي في المجتمعات المحتاجة.</p>
+                        <a href="#" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4: المؤتمرات والندوات -->
+                <div class="activity-grid-card" data-category="conferences" data-aos="fade-up" data-aos-delay="150">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-microphone-lines"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">مؤتمرات</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-microphone-lines"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>المؤتمرات والندوات</h3>
+                        <p>ننظم مؤتمرات وندوات دولية تجمع الخبراء والمختصين لبحث سبل دعم القضية الفلسطينية وتبادل الخبرات.</p>
+                        <a href="#" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 5: حملات التوعية -->
+                <div class="activity-grid-card" data-category="awareness" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">توعية</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-bullhorn"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>حملات التوعية</h3>
+                        <p>نطلق حملات توعوية واسعة النطاق لنشر الوعي حول القضايا الإنسانية وحقوق الشعب الفلسطيني على المستوى الدولي.</p>
+                        <a href="#" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 6: كفالة الأيتام -->
+                <div class="activity-grid-card" data-category="education" data-aos="fade-up" data-aos-delay="250">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">تعليم</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-child"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>كفالة الأيتام</h3>
+                        <p>برنامج شامل لكفالة الأيتام يتضمن التعليم والرعاية الصحية والدعم النفسي لضمان حياة كريمة لكل يتيم.</p>
+                        <a href="orphan-sponsorship.html" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 7: التمكين الاقتصادي -->
+                <div class="activity-grid-card" data-category="community" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">مجتمع</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>التمكين الاقتصادي</h3>
+                        <p>نعمل على تمكين الأسر اقتصاديًا من خلال مشاريع صغيرة ومتناهية الصغر تساعدهم على تحقيق الاكتفاء الذاتي.</p>
+                        <a href="#" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 8: المشاريع الصحية -->
+                <div class="activity-grid-card" data-category="relief" data-aos="fade-up" data-aos-delay="350">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">إغاثة</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-heart-pulse"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>المشاريع الصحية</h3>
+                        <p>نوفر الدعم الطبي والصحي من خلال توزيع الأدوية وإقامة المخيمات الطبية ودعم المستشفيات في المناطق المحتاجة.</p>
+                        <a href="#" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 9: الدعم النفسي والاجتماعي -->
+                <div class="activity-grid-card" data-category="awareness" data-aos="fade-up" data-aos-delay="400">
+                    <div class="activity-grid-card__image">
+                        <div class="activity-grid-card__placeholder">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="activity-grid-card__cat">توعية</span>
+                    </div>
+                    <div class="activity-grid-card__icon-wrap">
+                        <div class="activity-grid-card__icon"><i class="fas fa-brain"></i></div>
+                    </div>
+                    <div class="activity-grid-card__body">
+                        <h3>الدعم النفسي والاجتماعي</h3>
+                        <p>نقدم برامج متخصصة في الدعم النفسي والاجتماعي للأفراد المتأثرين بالأزمات لمساعدتهم على التعافي وإعادة بناء حياتهم.</p>
+                        <a href="#" class="activity-grid-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ IMPACT STATS ============ -->
+    <section class="section act-impact" id="actImpact">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">أثرنا</span>
+                <h2 class="section__title">أرقام تتحدث عن أثرنا</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="act-impact__grid" data-aos="fade-up">
+                <div class="act-impact__item">
+                    <div class="act-impact__icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="act-impact__number" data-target="120">0</div>
+                    <div class="act-impact__label">فعالية</div>
+                </div>
+                <div class="act-impact__item">
+                    <div class="act-impact__icon"><i class="fas fa-users"></i></div>
+                    <div class="act-impact__number" data-target="50000">0</div>
+                    <div class="act-impact__label">مستفيد</div>
+                </div>
+                <div class="act-impact__item">
+                    <div class="act-impact__icon"><i class="fas fa-globe-africa"></i></div>
+                    <div class="act-impact__number" data-target="12">0</div>
+                    <div class="act-impact__label">دولة</div>
+                </div>
+                <div class="act-impact__item">
+                    <div class="act-impact__icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="act-impact__number" data-target="85">0</div>
+                    <div class="act-impact__label">مشروع</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta">
+        <div class="cta__bg"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2>كن شريكًا في صناعة الأثر</h2>
+                <p>تبرعك يساهم في استمرار أنشطتنا ومشاريعنا التي تصل إلى آلاف المستفيدين حول العالم</p>
+                <div class="cta__btns">
+                    <a href="donate.html" class="btn btn--donate btn--lg pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    <a href="index.html#contact" class="btn btn--outline-light btn--lg"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية — نعمل على دعم المرأة والطفل في المناطق المحتاجة وتقديم يد العون للأسر المتضررة.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="activities.html">أنشطتنا</a></li>
+                            <li><a href="media.html">المركز الإعلامي</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="#">الإغاثة الطارئة</a></li>
+                            <li><a href="#">التعليم والتدريب</a></li>
+                            <li><a href="#">التمكين الاقتصادي</a></li>
+                            <li><a href="#">المشاريع الصحية</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك لتصلك آخر أخبارنا وقصص النجاح</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                جميع الحقوق محفوظة &copy; 2024 نساء الأقصى الدولية | Aksa Kadınları Derneği
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ============ FLOATING DONATE (mobile) ============ -->
+    <a href="donate.html" class="floating-donate"><i class="fas fa-heart"></i> تبرع الآن</a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/activities.js"></script>
+</body>
+</html>

@@ -1,0 +1,815 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نساء الأقصى الدولية | Aksa Kadınları</title>
+    <meta name="description" content="جمعية نساء الأقصى الدولية - معاً من أجل القدس وفلسطين">
+
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+905001234567"><i class="fas fa-phone-flip"></i> +90 500 123 45 67</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">العربية</a>
+                    <a href="#">Türkçe</a>
+                    <a href="#">English</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="#home" class="active">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="#about">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#values">قيمنا</a></li>
+                        <li><a href="#vision">رؤيتنا</a></li>
+                        <li><a href="#mission">رسالتنا</a></li>
+                        <li><a href="#goals">أهدافنا</a></li>
+                    </ul>
+                </li>
+                <li><a href="#activities">أنشطتنا</a></li>
+                <li><a href="#conferences">مؤتمراتنا</a></li>
+                <li class="has-dropdown">
+                    <a href="#projects">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#gaza">مشاريع غزة</a></li>
+                        <li><a href="#jerusalem">مشاريع القدس</a></li>
+                        <li class="has-dropdown">
+                            <a href="#campaigns">الحملات</a>
+                            <ul class="dropdown">
+                                <li><a href="#relief">حملات إغاثية</a></li>
+                                <li><a href="#awareness">حملات توعوية</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="#donate" class="btn btn--donate pulse-btn">
+                    <i class="fas fa-heart"></i> تبرع الآن
+                </a>
+                <button class="navbar__toggle" id="navToggle" aria-label="القائمة">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SLIDER ============ -->
+    <section class="hero" id="home">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero__slide" style="background-image: url('assets/images/banner-1.jpg')">
+                        <div class="hero__overlay"></div>
+                        <div class="container hero__content" data-swiper-parallax="-300">
+                            <span class="hero__badge"><i class="fas fa-exclamation-circle"></i> عاجل</span>
+                            <h1>إغاثة عاجلة<span>لفلسطين</span></h1>
+                            <p>ساهم معنا في تقديم المساعدات الإنسانية العاجلة للأسر المتضررة في غزة والقدس</p>
+                            <div class="hero__btns">
+                                <a href="#donate" class="btn btn--primary btn--lg"><i class="fas fa-heart"></i> تبرع الآن</a>
+                                <a href="#projects" class="btn btn--glass btn--lg"><i class="fas fa-arrow-left"></i> تعرف على مشاريعنا</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero__slide" style="background-image: url('assets/images/banner-2.jpg')">
+                        <div class="hero__overlay"></div>
+                        <div class="container hero__content" data-swiper-parallax="-300">
+                            <span class="hero__badge"><i class="fas fa-tint"></i> مشروع مستمر</span>
+                            <h1>توزيع المياه <span>النظيفة</span></h1>
+                            <p>شارك في مشروع حفر آبار المياه للعائلات المحتاجة في القدس</p>
+                            <div class="hero__btns">
+                                <a href="#donate" class="btn btn--primary btn--lg"><i class="fas fa-heart"></i> ساهم الآن</a>
+                                <a href="#about" class="btn btn--glass btn--lg"><i class="fas fa-arrow-left"></i> اعرف المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero__slide" style="background-image: url('assets/images/banner-3.jpg')">
+                        <div class="hero__overlay"></div>
+                        <div class="container hero__content" data-swiper-parallax="-300">
+                            <span class="hero__badge"><i class="fas fa-child"></i> كفالة</span>
+                            <h1>اكفل يتيماً<span>في القدس</span></h1>
+                            <p>ساعد في رسم البسمة على وجوه أيتام القدس من خلال كفالتهم وتأمين احتياجاتهم</p>
+                            <div class="hero__btns">
+                                <a href="#donate" class="btn btn--primary btn--lg"><i class="fas fa-heart"></i> اكفل الآن</a>
+                                <a href="#projects" class="btn btn--glass btn--lg"><i class="fas fa-arrow-left"></i> مشاريع الكفالة</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="hero__slide" style="background-image: url('assets/images/banner-4.jpg')">
+                        <div class="hero__overlay"></div>
+                        <div class="container hero__content" data-swiper-parallax="-300">
+                            <span class="hero__badge"><i class="fas fa-hand-holding-heart"></i> صدقة جارية</span>
+                            <h1>صدقتك تصنع<span>الفرق</span></h1>
+                            <p>تبرعك يصل مباشرة لأصحاب الحاجة في القدس وغزة ويغير حياتهم</p>
+                            <div class="hero__btns">
+                                <a href="#donate" class="btn btn--primary btn--lg"><i class="fas fa-heart"></i> تصدق الآن</a>
+                                <a href="#activities" class="btn btn--glass btn--lg"><i class="fas fa-arrow-left"></i> أنشطتنا</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <!-- Scroll indicator -->
+        <!-- <div class="hero__scroll">
+            <span>اكتشف المزيد</span>
+            <div class="hero__scroll-line"></div>
+        </div> -->
+    </section>
+
+    <!-- ============ QUICK DONATE ============ -->
+    <section class="quick-donate" id="donate">
+        <div class="container">
+            <div class="quick-donate__card" data-aos="fade-up">
+                <div class="quick-donate__header">
+                    <div class="quick-donate__header-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h2>تبرع سريع</h2>
+                    <p>ساهم في دعم مشاريعنا الإنسانية</p>
+                </div>
+                <div class="quick-donate__body">
+                    <!-- Donation type toggle -->
+                    <div class="donate-toggle">
+                        <button class="donate-toggle__btn active" data-type="once">تبرع لمرة واحدة</button>
+                        <button class="donate-toggle__btn" data-type="monthly">تبرع شهري <span class="badge-new">مستمر</span></button>
+                    </div>
+                    <div class="quick-donate__amounts">
+                        <button class="amount-btn" data-amount="10" data-impact="توفر وجبة لعائلة">
+                            <span class="amount-btn__value">$10</span>
+                        </button>
+                        <button class="amount-btn" data-amount="25" data-impact="توفر حقيبة مدرسية">
+                            <span class="amount-btn__value">$25</span>
+                        </button>
+                        <button class="amount-btn active" data-amount="50" data-impact="تطعم عائلة لأسبوع">
+                            <span class="amount-btn__value">$50</span>
+                        </button>
+                        <button class="amount-btn" data-amount="100" data-impact="كفالة يتيم لشهر">
+                            <span class="amount-btn__value">$100</span>
+                        </button>
+                        <button class="amount-btn" data-amount="250" data-impact="حصة من بئر مياه">
+                            <span class="amount-btn__value">$250</span>
+                        </button>
+                        <button class="amount-btn" data-amount="500" data-impact="حصة كاملة في بئر">
+                            <span class="amount-btn__value">$500</span>
+                        </button>
+                    </div>
+                    <!-- Impact text -->
+                    <div class="donate-impact" id="donateImpact">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>تبرعك بـ $50 يكفي لـ <strong>تطعم عائلة لأسبوع</strong></span>
+                    </div>
+                    <div class="quick-donate__custom">
+                        <div class="input-group">
+                            <span class="input-group__prefix">$</span>
+                            <input type="number" id="customAmount" placeholder="أو أدخل مبلغاً آخر" min="1">
+                            <span class="input-group__suffix">USD</span>
+                        </div>
+                    </div>
+                    <div class="quick-donate__project">
+                        <select id="donateProject">
+                            <option value="">اختر المشروع</option>
+                            <option value="gaza">مشاريع غزة</option>
+                            <option value="jerusalem">مشاريع القدس</option>
+                            <option value="orphan">كفالة الأيتام</option>
+                            <option value="water">توزيع المياه</option>
+                            <option value="relief">إغاثة عاجلة</option>
+                            <option value="sadaqa">صدقة جارية</option>
+                        </select>
+                    </div>
+                    <button class="btn btn--donate btn--lg btn--full donate-submit" id="donateBtn">
+                        <i class="fas fa-heart"></i> تبرع الآن
+                    </button>
+                    <div class="quick-donate__trust">
+                        <span><i class="fas fa-lock"></i> دفع آمن</span>
+                        <span><i class="fas fa-shield-alt"></i> مشفر 256-bit</span>
+                        <span><i class="fas fa-undo"></i> استرداد سهل</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stats__item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stats__ring">
+                        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" class="stats__ring-bg"/><circle cx="50" cy="50" r="45" class="stats__ring-fill" data-percent="85"/></svg>
+                        <div class="stats__icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    </div>
+                    <div class="stats__number" data-target="15000">0</div>
+                    <div class="stats__label">متبرع</div>
+                </div>
+                <div class="stats__item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stats__ring">
+                        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" class="stats__ring-bg"/><circle cx="50" cy="50" r="45" class="stats__ring-fill" data-percent="70"/></svg>
+                        <div class="stats__icon"><i class="fas fa-project-diagram"></i></div>
+                    </div>
+                    <div class="stats__number" data-target="250">0</div>
+                    <div class="stats__label">مشروع منجز</div>
+                </div>
+                <div class="stats__item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stats__ring">
+                        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" class="stats__ring-bg"/><circle cx="50" cy="50" r="45" class="stats__ring-fill" data-percent="92"/></svg>
+                        <div class="stats__icon"><i class="fas fa-users"></i></div>
+                    </div>
+                    <div class="stats__number" data-target="50000">0</div>
+                    <div class="stats__label">مستفيد</div>
+                </div>
+                <div class="stats__item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stats__ring">
+                        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" class="stats__ring-bg"/><circle cx="50" cy="50" r="45" class="stats__ring-fill" data-percent="60"/></svg>
+                        <div class="stats__icon"><i class="fas fa-globe-americas"></i></div>
+                    </div>
+                    <div class="stats__number" data-target="30">0</div>
+                    <div class="stats__label">دولة نعمل فيها</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CAMPAIGNS ============ -->
+    <section class="campaigns section" id="campaigns">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">حملات عاجلة</span>
+                <h2 class="section__title">حملاتنا الحالية</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="campaigns__grid">
+                <div class="campaign-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="campaign-card__image">
+                        <img src="assets/images/banner-1.jpg" alt="إغاثة عاجلة">
+                        <span class="campaign-card__tag">عاجل</span>
+                        <div class="campaign-card__donors"><i class="fas fa-users"></i> 1,240 متبرع</div>
+                        <div class="campaign-card__overlay">
+                            <a href="#donate" class="btn btn--primary">تبرع الآن</a>
+                        </div>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>إغاثة عاجلة - فلسطين</h3>
+                        <p>تقديم المساعدات الإنسانية العاجلة من غذاء ودواء ومستلزمات طبية للأسر المتضررة.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" style="width: 72%" data-width="72%"></div>
+                                <span class="progress-bar__percent">72%</span>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>جُمع: <strong>$72,000</strong></span>
+                                <span>الهدف: <strong>$100,000</strong></span>
+                            </div>
+                        </div>
+                        <a href="#donate" class="btn btn--donate btn--full"><i class="fas fa-heart"></i> ساهم في هذا المشروع</a>
+                    </div>
+                </div>
+                <div class="campaign-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="campaign-card__image">
+                        <img src="assets/images/banner-2.jpg" alt="توزيع المياه">
+                        <span class="campaign-card__tag campaign-card__tag--green">مستمر</span>
+                        <div class="campaign-card__donors"><i class="fas fa-users"></i> 856 متبرع</div>
+                        <div class="campaign-card__overlay">
+                            <a href="#donate" class="btn btn--primary">تبرع الآن</a>
+                        </div>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>مشروع آبار المياه - القدس</h3>
+                        <p>حفر آبار مياه نظيفة للعائلات المحتاجة. حصة واحدة = $500 تخدم مئات الأسر.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" style="width: 45%" data-width="45%"></div>
+                                <span class="progress-bar__percent">45%</span>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>جُمع: <strong>$45,000</strong></span>
+                                <span>الهدف: <strong>$100,000</strong></span>
+                            </div>
+                        </div>
+                        <a href="#donate" class="btn btn--donate btn--full"><i class="fas fa-heart"></i> ساهم في هذا المشروع</a>
+                    </div>
+                </div>
+                <div class="campaign-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="campaign-card__image">
+                        <img src="assets/images/banner-3.jpg" alt="كفالة الأيتام">
+                        <span class="campaign-card__tag campaign-card__tag--purple">كفالة</span>
+                        <div class="campaign-card__donors"><i class="fas fa-users"></i> 2,100 متبرع</div>
+                        <div class="campaign-card__overlay">
+                            <a href="#donate" class="btn btn--primary">تبرع الآن</a>
+                        </div>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>كفالة أيتام القدس</h3>
+                        <p>اكفل يتيماً بـ $100 شهرياً لتأمين احتياجاته من تعليم وغذاء ورعاية صحية.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" style="width: 60%" data-width="60%"></div>
+                                <span class="progress-bar__percent">60%</span>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>جُمع: <strong>$60,000</strong></span>
+                                <span>الهدف: <strong>$100,000</strong></span>
+                            </div>
+                        </div>
+                        <a href="#donate" class="btn btn--donate btn--full"><i class="fas fa-heart"></i> ساهم في هذا المشروع</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT US ============ -->
+    <section class="about section section--gray" id="about">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">تعرف علينا</span>
+                <h2 class="section__title">من نحن</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="about__grid">
+                <div class="about__image" data-aos="fade-left">
+                    <div class="about__image-frame">
+                        <img src="assets/images/bg-alaqsa.jpg" alt="المسجد الأقصى">
+                    </div>
+                    <div class="about__image-badge">
+                        <span>+15</span>
+                        <small>سنة من العطاء</small>
+                    </div>
+                </div>
+                <div class="about__content" data-aos="fade-right">
+                    <h3>جمعية نساء الأقصى الدولية</h3>
+                    <p>نحن مؤسسة إنسانية دولية تعمل من أجل دعم ومساندة الشعب الفلسطيني، مع التركيز على القدس وغزة. نسعى لتقديم المساعدات الإنسانية والتنموية لتحسين حياة المحتاجين والمتضررين.</p>
+                    <p>نؤمن بأن العمل الإنساني هو واجب وأمانة، ونعمل بكل جهد لإيصال المساعدات لمستحقيها بشفافية وأمانة.</p>
+                    <div class="about__values" id="values">
+                        <div class="value-card" data-aos="zoom-in" data-aos-delay="0">
+                            <div class="value-card__icon"><i class="fas fa-eye"></i></div>
+                            <h4 id="vision">رؤيتنا</h4>
+                            <p>أن نكون المؤسسة الرائدة في تقديم الدعم الإنساني للقدس وفلسطين على المستوى الدولي.</p>
+                        </div>
+                        <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="value-card__icon"><i class="fas fa-bullseye"></i></div>
+                            <h4 id="mission">رسالتنا</h4>
+                            <p>تقديم المساعدات الإنسانية والتنموية المستدامة لدعم الشعب الفلسطيني وتمكينه.</p>
+                        </div>
+                        <div class="value-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="value-card__icon"><i class="fas fa-star"></i></div>
+                            <h4 id="goals">أهدافنا</h4>
+                            <p>إغاثة المتضررين، كفالة الأيتام، دعم التعليم، وبناء مشاريع تنموية مستدامة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">إنجازاتنا</span>
+                <h2 class="section__title">مشاريعنا</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="projects__tabs" data-aos="fade-up">
+                <button class="tab-btn active" data-tab="all">الكل</button>
+                <button class="tab-btn" data-tab="gaza" id="gaza">مشاريع غزة</button>
+                <button class="tab-btn" data-tab="jerusalem" id="jerusalem">مشاريع القدس</button>
+                <button class="tab-btn" data-tab="relief" id="relief">حملات إغاثية</button>
+                <button class="tab-btn" data-tab="awareness" id="awareness">حملات توعوية</button>
+            </div>
+            <div class="projects__grid">
+                <div class="project-card" data-category="gaza relief" data-aos="fade-up">
+                    <div class="project-card__icon"><i class="fas fa-utensils"></i></div>
+                    <h3>توزيع الطرود الغذائية</h3>
+                    <p>توزيع آلاف الطرود الغذائية على الأسر المحتاجة في قطاع غزة خلال الأزمات الإنسانية.</p>
+                    <a href="#" class="project-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="project-card" data-category="jerusalem" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card__icon"><i class="fas fa-tint"></i></div>
+                    <h3>آبار المياه النظيفة</h3>
+                    <p>حفر آبار مياه للأحياء المحرومة في القدس لتوفير مياه شرب نظيفة وصحية.</p>
+                    <a href="#" class="project-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="project-card" data-category="gaza" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card__icon"><i class="fas fa-child"></i></div>
+                    <h3>كفالة الأيتام</h3>
+                    <p>برنامج شامل لكفالة أيتام غزة يشمل التعليم والرعاية الصحية والدعم النفسي.</p>
+                    <a href="#" class="project-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="project-card" data-category="jerusalem awareness" data-aos="fade-up" data-aos-delay="0">
+                    <div class="project-card__icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>دعم التعليم</h3>
+                    <p>تقديم المنح الدراسية والمستلزمات التعليمية لطلاب المدارس والجامعات في القدس.</p>
+                    <a href="#" class="project-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="project-card" data-category="relief" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card__icon"><i class="fas fa-medkit"></i></div>
+                    <h3>الدعم الطبي</h3>
+                    <p>توفير الأدوية والمستلزمات الطبية ودعم المستشفيات في المناطق المتضررة.</p>
+                    <a href="#" class="project-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="project-card" data-category="awareness" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card__icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>حملات التوعية</h3>
+                    <p>حملات توعوية دولية لنشر الوعي حول قضية فلسطين والقدس والمسجد الأقصى.</p>
+                    <a href="#" class="project-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ACTIVITIES ============ -->
+    <section class="activities section section--gray" id="activities">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">ماذا نفعل</span>
+                <h2 class="section__title">أنشطتنا</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="activities__grid">
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="activity-card__number">01</div>
+                    <div class="activity-card__icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>الإغاثة الإنسانية</h3>
+                    <p>تقديم المساعدات العاجلة والإغاثية للمتضررين من الأزمات والكوارث في فلسطين.</p>
+                </div>
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-card__number">02</div>
+                    <div class="activity-card__icon"><i class="fas fa-home"></i></div>
+                    <h3>المشاريع التنموية</h3>
+                    <p>بناء مشاريع مستدامة تساهم في تحسين حياة المجتمعات المحلية في القدس وغزة.</p>
+                </div>
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-card__number">03</div>
+                    <div class="activity-card__icon"><i class="fas fa-heart"></i></div>
+                    <h3>الكفالات والرعاية</h3>
+                    <p>كفالة الأيتام والأرامل وتقديم الرعاية الشاملة لهم في جميع جوانب الحياة.</p>
+                </div>
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-card__number">04</div>
+                    <div class="activity-card__icon"><i class="fas fa-microphone"></i></div>
+                    <h3>المناصرة والتوعية</h3>
+                    <p>تنظيم الفعاليات والمؤتمرات لنشر الوعي والدفاع عن حقوق الشعب الفلسطيني.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONFERENCES ============ -->
+    <section class="conferences section" id="conferences">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">فعالياتنا</span>
+                <h2 class="section__title">مؤتمراتنا</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="swiper conferences-swiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="conference-card">
+                            <div class="conference-card__date">
+                                <span class="day">15</span>
+                                <span class="month">مارس</span>
+                                <span class="year">2026</span>
+                            </div>
+                            <div class="conference-card__content">
+                                <h3>المؤتمر الدولي لدعم القدس</h3>
+                                <p>مؤتمر دولي يجمع ممثلين من 30 دولة لبحث سبل دعم القدس وأهلها.</p>
+                                <div class="conference-card__meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> إسطنبول، تركيا</span>
+                                    <span><i class="fas fa-users"></i> +500 مشارك</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="conference-card">
+                            <div class="conference-card__date">
+                                <span class="day">22</span>
+                                <span class="month">أبريل</span>
+                                <span class="year">2026</span>
+                            </div>
+                            <div class="conference-card__content">
+                                <h3>ندوة المرأة الفلسطينية</h3>
+                                <p>ندوة تسلط الضوء على دور المرأة الفلسطينية في الصمود والمقاومة السلمية.</p>
+                                <div class="conference-card__meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> أنقرة، تركيا</span>
+                                    <span><i class="fas fa-users"></i> +300 مشارك</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="conference-card">
+                            <div class="conference-card__date">
+                                <span class="day">10</span>
+                                <span class="month">مايو</span>
+                                <span class="year">2026</span>
+                            </div>
+                            <div class="conference-card__content">
+                                <h3>معرض فلسطين الخيري</h3>
+                                <p>معرض خيري لعرض المنتجات الفلسطينية التقليدية ودعم الحرفيين الفلسطينيين.</p>
+                                <div class="conference-card__meta">
+                                    <span><i class="fas fa-map-marker-alt"></i> لندن، بريطانيا</span>
+                                    <span><i class="fas fa-users"></i> +200 مشارك</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VOLUNTEER ============ -->
+    <section class="volunteer section" id="volunteer">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">انضم إلينا</span>
+                <h2 class="section__title">تطوع معنا</h2>
+                <div class="section__line"></div>
+                <p class="section__desc">كن جزءاً من فريقنا وساهم في صنع التغيير. سجّل الآن كمتطوع مع جمعية نساء الأقصى الدولية.</p>
+            </div>
+            <div class="volunteer__grid">
+                <div class="volunteer__info" data-aos="fade-left">
+                    <div class="volunteer__info-card">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h3>تطوع من أي مكان</h3>
+                            <p>يمكنك التطوع معنا من أي مكان في العالم عبر الإنترنت أو ميدانياً.</p>
+                        </div>
+                    </div>
+                    <div class="volunteer__info-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>وقتك أنت تحدده</h3>
+                            <p>اختر الوقت المناسب لك للتطوع حسب جدولك الشخصي.</p>
+                        </div>
+                    </div>
+                    <div class="volunteer__info-card">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h3>شهادة تطوع معتمدة</h3>
+                            <p>احصل على شهادة تطوع معتمدة من المؤسسة تثري سيرتك الذاتية.</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="volunteer__form" id="volunteerForm" data-aos="fade-right">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="volName">الاسم الكامل *</label>
+                            <input type="text" id="volName" required placeholder="أدخل اسمك الكامل">
+                        </div>
+                        <div class="form-group">
+                            <label for="volEmail">البريد الإلكتروني *</label>
+                            <input type="email" id="volEmail" required placeholder="example@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="volPhone">رقم الهاتف *</label>
+                            <input type="tel" id="volPhone" required placeholder="+90 5XX XXX XX XX">
+                        </div>
+                        <div class="form-group">
+                            <label for="volCountry">الدولة *</label>
+                            <input type="text" id="volCountry" required placeholder="دولة الإقامة">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="volField">مجال التطوع</label>
+                        <select id="volField">
+                            <option value="">اختر مجال التطوع</option>
+                            <option value="field">عمل ميداني</option>
+                            <option value="media">إعلام وتواصل</option>
+                            <option value="design">تصميم وإبداع</option>
+                            <option value="tech">تقنية وبرمجة</option>
+                            <option value="translate">ترجمة</option>
+                            <option value="admin">إدارة وتنظيم</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="volMessage">رسالتك</label>
+                        <textarea id="volMessage" rows="4" placeholder="أخبرنا عن نفسك وخبراتك..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--lg btn--full">
+                        <i class="fas fa-paper-plane"></i> أرسل طلب التطوع
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ NEWS ============ -->
+    <section class="news section section--gray" id="news">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">آخر الأخبار</span>
+                <h2 class="section__title">أحدث الأخبار والفعاليات</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="news__grid">
+                <article class="news-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="news-card__image">
+                        <img src="assets/images/banner-4.jpg" alt="خبر">
+                        <span class="news-card__date"><i class="far fa-calendar-alt"></i> 15 مارس 2026</span>
+                    </div>
+                    <div class="news-card__body">
+                        <span class="news-card__category">أخبار</span>
+                        <h3>انطلاق حملة الإغاثة الشتوية لعائلات غزة</h3>
+                        <p>أطلقت جمعية نساء الأقصى حملة إغاثة شتوية شاملة لتوفير المستلزمات الأساسية...</p>
+                        <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+                <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-card__image">
+                        <img src="assets/images/banner-1.jpg" alt="خبر">
+                        <span class="news-card__date"><i class="far fa-calendar-alt"></i> 10 مارس 2026</span>
+                    </div>
+                    <div class="news-card__body">
+                        <span class="news-card__category">فعاليات</span>
+                        <h3>نجاح المؤتمر الدولي السنوي لدعم القدس</h3>
+                        <p>اختتمت أعمال المؤتمر الدولي السنوي بمشاركة واسعة من ممثلي أكثر من 30 دولة...</p>
+                        <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+                <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-card__image">
+                        <img src="assets/images/banner-2.jpg" alt="خبر">
+                        <span class="news-card__date"><i class="far fa-calendar-alt"></i> 5 مارس 2026</span>
+                    </div>
+                    <div class="news-card__body">
+                        <span class="news-card__category">مشاريع</span>
+                        <h3>افتتاح بئر مياه جديد في حي الشيخ جراح</h3>
+                        <p>تم افتتاح بئر مياه جديد بتمويل من المتبرعين الكرام لخدمة أكثر من 500 عائلة...</p>
+                        <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA BANNER ============ -->
+    <section class="cta">
+        <div class="cta__bg"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2>معاً نصنع الفرق</h2>
+                <p>تبرعك مهما كان بسيطاً يصنع فرقاً كبيراً في حياة الآلاف. ساهم الآن في دعم مشاريعنا الإنسانية.</p>
+                <div class="cta__btns">
+                    <a href="#donate" class="btn btn--primary btn--lg"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    <a href="#volunteer" class="btn btn--outline-light btn--lg"><i class="fas fa-hand-paper"></i> تطوع معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__badge">تواصل</span>
+                <h2 class="section__title">تواصل معنا</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__info" data-aos="fade-left">
+                    <div class="contact__info-card"><i class="fas fa-map-marker-alt"></i><div><h3>العنوان</h3><p>إسطنبول، تركيا</p></div></div>
+                    <div class="contact__info-card"><i class="fas fa-phone"></i><div><h3>الهاتف</h3><p dir="ltr">+90 500 123 45 67</p></div></div>
+                    <div class="contact__info-card"><i class="fas fa-envelope"></i><div><h3>البريد الإلكتروني</h3><p>info@aksakadinlari.org</p></div></div>
+                    <div class="contact__info-card"><i class="fas fa-clock"></i><div><h3>ساعات العمل</h3><p>الأحد - الخميس: 9:00 - 18:00</p></div></div>
+                    <div class="contact__social">
+                        <a href="#" class="social-btn social-btn--facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn social-btn--instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn social-btn--youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-btn social-btn--twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact__form" data-aos="fade-right">
+                    <div class="form-row">
+                        <div class="form-group"><input type="text" placeholder="الاسم" required></div>
+                        <div class="form-group"><input type="email" placeholder="البريد الإلكتروني" required></div>
+                    </div>
+                    <div class="form-group"><input type="text" placeholder="الموضوع"></div>
+                    <div class="form-group"><textarea rows="5" placeholder="رسالتك..." required></textarea></div>
+                    <button type="submit" class="btn btn--primary btn--lg"><i class="fas fa-paper-plane"></i> أرسل الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية - مؤسسة إنسانية تعمل من أجل دعم ومساندة الشعب الفلسطيني.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="#home">الرئيسية</a></li>
+                            <li><a href="#about">من نحن</a></li>
+                            <li><a href="#projects">مشاريعنا</a></li>
+                            <li><a href="#activities">أنشطتنا</a></li>
+                            <li><a href="#conferences">مؤتمراتنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="#gaza">مشاريع غزة</a></li>
+                            <li><a href="#jerusalem">مشاريع القدس</a></li>
+                            <li><a href="#relief">حملات إغاثية</a></li>
+                            <li><a href="#awareness">حملات توعوية</a></li>
+                            <li><a href="#donate">تبرع الآن</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك في نشرتنا البريدية لتصلك آخر الأخبار والتحديثات.</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2026 جمعية نساء الأقصى الدولية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى"><i class="fas fa-chevron-up"></i></button>
+    <a href="#donate" class="floating-donate" id="floatingDonate"><i class="fas fa-heart"></i><span>تبرع</span></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

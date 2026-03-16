@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاريعنا | نساء الأقصى الدولية</title>
+    <meta name="description" content="تعرّف على مشاريعنا الإنسانية والتنموية التي تصل إلى آلاف المستفيدين حول العالم — إغاثة، كفالة أيتام، تعليم، وطوارئ.">
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">عربي</a>
+                    <a href="#">TR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="about.html">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">عن الجمعية</a></li>
+                        <li><a href="about.html#vision">رؤيتنا ورسالتنا</a></li>
+                        <li><a href="about.html#team">الفريق</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="projects.html" class="active">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                        <li><a href="projects.html">جميع المشاريع</a></li>
+                    </ul>
+                </li>
+                <li><a href="activities.html">أنشطتنا</a></li>
+                <li><a href="media.html">المركز الإعلامي</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="donate.html" class="btn btn--donate pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                <button class="navbar__toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content" data-aos="fade-up">
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>مشاريعنا</span>
+                </div>
+                <h1>مشاريعنا <span>نعمل بتفانٍ لتحقيق التغيير</span></h1>
+                <p>نسعى من خلال مشاريعنا المتنوعة لتقديم يد العون والدعم للمحتاجين في مختلف المجالات الإنسانية والتنموية.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" style="padding: 80px 0;">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="proj-filters" data-aos="fade-up">
+                <button class="proj-filter-btn active" data-filter="all">الكل</button>
+                <button class="proj-filter-btn" data-filter="relief">إغاثة</button>
+                <button class="proj-filter-btn" data-filter="orphan">كفالة أيتام</button>
+                <button class="proj-filter-btn" data-filter="education">تعليم</button>
+                <button class="proj-filter-btn" data-filter="emergency">طوارئ</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="proj-grid">
+
+                <!-- Card 1: إغاثة غزة العاجلة -->
+                <div class="campaign-card" data-category="relief" data-aos="fade-up">
+                    <div class="campaign-card__image">
+                        <div class="campaign-card__placeholder">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <span class="campaign-card__cat campaign-card__cat--relief">إغاثة</span>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>إغاثة غزة العاجلة</h3>
+                        <p>حملة إنسانية عاجلة لتقديم المساعدات الغذائية والطبية والإيوائية لأهلنا في قطاع غزة المحاصر.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" data-width="82" style="width:0%"></div>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>تم جمع <strong>82%</strong></span>
+                                <span>من المبلغ المستهدف</span>
+                            </div>
+                        </div>
+                        <div class="campaign-card__stats">
+                            <div class="stat-item">
+                                <span>المبلغ المستهدف</span>
+                                <strong>$500,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>تم جمعه</span>
+                                <strong class="stat-accent">$410,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>المتبقي</span>
+                                <strong>$90,000</strong>
+                            </div>
+                        </div>
+                        <a href="donate.html" class="campaign-card__btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: كفالة 1000 يتيم -->
+                <div class="campaign-card" data-category="orphan" data-aos="fade-up" data-aos-delay="100">
+                    <div class="campaign-card__image">
+                        <div class="campaign-card__placeholder">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <span class="campaign-card__cat campaign-card__cat--orphan">كفالة أيتام</span>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>كفالة 1000 يتيم</h3>
+                        <p>مشروع لكفالة ألف يتيم ورعايتهم صحياً وتعليمياً ونفسياً لضمان مستقبل أفضل لهم.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" data-width="65" style="width:0%"></div>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>تم جمع <strong>65%</strong></span>
+                                <span>من المبلغ المستهدف</span>
+                            </div>
+                        </div>
+                        <div class="campaign-card__stats">
+                            <div class="stat-item">
+                                <span>المبلغ المستهدف</span>
+                                <strong>$300,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>تم جمعه</span>
+                                <strong class="stat-accent">$195,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>المتبقي</span>
+                                <strong>$105,000</strong>
+                            </div>
+                        </div>
+                        <a href="donate.html" class="campaign-card__btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: بناء مدرسة في القدس -->
+                <div class="campaign-card" data-category="education" data-aos="fade-up" data-aos-delay="200">
+                    <div class="campaign-card__image">
+                        <div class="campaign-card__placeholder">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <span class="campaign-card__cat campaign-card__cat--education">تعليم</span>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>بناء مدرسة في القدس</h3>
+                        <p>مشروع لبناء مدرسة نموذجية في مدينة القدس لتوفير بيئة تعليمية آمنة ومتطورة للأطفال.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" data-width="45" style="width:0%"></div>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>تم جمع <strong>45%</strong></span>
+                                <span>من المبلغ المستهدف</span>
+                            </div>
+                        </div>
+                        <div class="campaign-card__stats">
+                            <div class="stat-item">
+                                <span>المبلغ المستهدف</span>
+                                <strong>$250,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>تم جمعه</span>
+                                <strong class="stat-accent">$112,500</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>المتبقي</span>
+                                <strong>$137,500</strong>
+                            </div>
+                        </div>
+                        <a href="donate.html" class="campaign-card__btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: مستشفى ميداني -->
+                <div class="campaign-card" data-category="emergency" data-aos="fade-up" data-aos-delay="100">
+                    <div class="campaign-card__image">
+                        <div class="campaign-card__placeholder">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <span class="campaign-card__cat campaign-card__cat--emergency">طوارئ</span>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>مستشفى ميداني</h3>
+                        <p>إنشاء مستشفى ميداني متكامل لتقديم الرعاية الصحية الطارئة للمتضررين في مناطق النزاع.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" data-width="30" style="width:0%"></div>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>تم جمع <strong>30%</strong></span>
+                                <span>من المبلغ المستهدف</span>
+                            </div>
+                        </div>
+                        <div class="campaign-card__stats">
+                            <div class="stat-item">
+                                <span>المبلغ المستهدف</span>
+                                <strong>$1,000,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>تم جمعه</span>
+                                <strong class="stat-accent">$300,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>المتبقي</span>
+                                <strong>$700,000</strong>
+                            </div>
+                        </div>
+                        <a href="donate.html" class="campaign-card__btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    </div>
+                </div>
+
+                <!-- Card 5: سلال غذائية رمضان -->
+                <div class="campaign-card" data-category="relief" data-aos="fade-up" data-aos-delay="200">
+                    <div class="campaign-card__image">
+                        <div class="campaign-card__placeholder">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <span class="campaign-card__cat campaign-card__cat--relief">إغاثة</span>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>سلال غذائية رمضان</h3>
+                        <p>توزيع سلال غذائية متكاملة على الأسر المحتاجة خلال شهر رمضان المبارك لسدّ احتياجاتهم الأساسية.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" data-width="90" style="width:0%"></div>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>تم جمع <strong>90%</strong></span>
+                                <span>من المبلغ المستهدف</span>
+                            </div>
+                        </div>
+                        <div class="campaign-card__stats">
+                            <div class="stat-item">
+                                <span>المبلغ المستهدف</span>
+                                <strong>$100,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>تم جمعه</span>
+                                <strong class="stat-accent">$90,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>المتبقي</span>
+                                <strong>$10,000</strong>
+                            </div>
+                        </div>
+                        <a href="donate.html" class="campaign-card__btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    </div>
+                </div>
+
+                <!-- Card 6: تدريب معلمات -->
+                <div class="campaign-card" data-category="education" data-aos="fade-up" data-aos-delay="300">
+                    <div class="campaign-card__image">
+                        <div class="campaign-card__placeholder">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <span class="campaign-card__cat campaign-card__cat--education">تعليم</span>
+                    </div>
+                    <div class="campaign-card__body">
+                        <h3>تدريب معلمات</h3>
+                        <p>برنامج تدريبي شامل لتأهيل المعلمات وتطوير مهاراتهن التعليمية والتربوية لتحسين جودة التعليم.</p>
+                        <div class="campaign-card__progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" data-width="55" style="width:0%"></div>
+                            </div>
+                            <div class="progress-bar__info">
+                                <span>تم جمع <strong>55%</strong></span>
+                                <span>من المبلغ المستهدف</span>
+                            </div>
+                        </div>
+                        <div class="campaign-card__stats">
+                            <div class="stat-item">
+                                <span>المبلغ المستهدف</span>
+                                <strong>$80,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>تم جمعه</span>
+                                <strong class="stat-accent">$44,000</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>المتبقي</span>
+                                <strong>$36,000</strong>
+                            </div>
+                        </div>
+                        <a href="donate.html" class="campaign-card__btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta__bg"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2>ساهم في دعم مشاريعنا</h2>
+                <p>تبرعك يساهم في استمرار مشاريعنا التي تصل إلى آلاف المستفيدين حول العالم</p>
+                <div class="cta__btns">
+                    <a href="donate.html" class="btn btn--donate btn--lg pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    <a href="contact.html" class="btn btn--outline-light btn--lg"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية — نعمل على دعم المرأة والطفل في المناطق المحتاجة وتقديم يد العون للأسر المتضررة.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="projects.html">مشاريعنا</a></li>
+                            <li><a href="activities.html">أنشطتنا</a></li>
+                            <li><a href="media.html">المركز الإعلامي</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="projects.html">الإغاثة الطارئة</a></li>
+                            <li><a href="projects.html">التعليم والتدريب</a></li>
+                            <li><a href="projects.html">التمكين الاقتصادي</a></li>
+                            <li><a href="projects.html">المشاريع الصحية</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك لتصلك آخر أخبارنا وقصص النجاح</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                جميع الحقوق محفوظة &copy; 2024 نساء الأقصى الدولية | Aksa Kadınları Derneği
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- FLOATING DONATE (mobile) -->
+    <a href="donate.html" class="floating-donate"><i class="fas fa-heart"></i> تبرع الآن</a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

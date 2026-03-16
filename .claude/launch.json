@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nisa-alaqsa",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["node_modules/serve/build/main.js", "."],
+      "port": 5555,
+      "autoPort": true
+    }
+  ]
+}

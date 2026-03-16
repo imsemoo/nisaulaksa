@@ -1,0 +1,938 @@
+/* ============================================
+   صفحة المشاريع - Projects Page
+   Uses main style.css design tokens
+   ============================================ */
+
+/* ---- PAGE HERO (inner pages) ---- */
+.page-hero {
+    position: relative;
+    padding: 100px 0 80px;
+    overflow: hidden;
+}
+
+.page-hero__bg {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-dark);
+}
+
+.page-hero__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/bg-alaqsa.jpg') center/cover;
+    opacity: 0.08;
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: var(--sp-3);
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.breadcrumb i {
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumb span {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.page-hero__content h1 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--sp-2);
+}
+
+.page-hero__content h1 span {
+    display: block;
+    color: var(--gold);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.page-hero__content > p {
+    font-size: 1.05rem;
+    opacity: 0.75;
+    font-weight: 300;
+    max-width: 560px;
+    line-height: 2;
+}
+
+/* ---- FILTER BUTTONS ---- */
+.proj-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--sp-1);
+    flex-wrap: wrap;
+    margin-bottom: var(--sp-5);
+}
+
+.proj-filter-btn {
+    padding: 9px 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    background: #fff;
+    color: var(--text-light);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-out);
+    font-size: 0.87rem;
+    font-family: inherit;
+}
+
+.proj-filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.proj-filter-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* ---- PROJECTS GRID ---- */
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
+}
+
+/* ---- PROJECT CAMPAIGN CARD ---- */
+.campaign-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: all 0.35s var(--ease-out);
+    position: relative;
+}
+
+.campaign-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.campaign-card.hide {
+    display: none;
+}
+
+/* Card Image Area */
+.campaign-card__image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.campaign-card__placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-gray) 0%, #ede0e7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: rgba(155, 32, 97, 0.15);
+    transition: all 0.4s var(--ease-out);
+}
+
+.campaign-card:hover .campaign-card__placeholder {
+    transform: scale(1.05);
+}
+
+.campaign-card__cat {
+    position: absolute;
+    top: var(--sp-2);
+    right: var(--sp-2);
+    padding: 4px 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    color: #fff;
+    background: var(--accent);
+}
+
+.campaign-card__cat--relief {
+    background: var(--orange);
+}
+
+.campaign-card__cat--orphan {
+    background: var(--accent);
+}
+
+.campaign-card__cat--education {
+    background: var(--primary);
+}
+
+.campaign-card__cat--emergency {
+    background: #e74c3c;
+}
+
+/* Card Body */
+.campaign-card__body {
+    padding: var(--sp-3);
+}
+
+.campaign-card__body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-1);
+    line-height: 1.5;
+}
+
+.campaign-card__body p {
+    font-size: 0.86rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: var(--sp-2);
+}
+
+/* Card Progress */
+.campaign-card__progress {
+    margin-bottom: var(--sp-2);
+}
+
+.campaign-card__progress .progress-bar {
+    margin-bottom: var(--sp-1);
+}
+
+/* Card Stats Row */
+.campaign-card__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--sp-2);
+    font-size: 0.82rem;
+}
+
+.campaign-card__stats .stat-item {
+    text-align: center;
+}
+
+.campaign-card__stats .stat-item span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+}
+
+.campaign-card__stats .stat-item strong {
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.campaign-card__stats .stat-item strong.stat-accent {
+    color: var(--accent);
+}
+
+/* Card Donate Button */
+.campaign-card__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s var(--ease-out);
+}
+
+.campaign-card__btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+.campaign-card__btn i {
+    font-size: 0.85rem;
+}
+
+/* ---- PROJECT SINGLE: TWO-COLUMN LAYOUT ---- */
+.project-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--sp-5);
+    align-items: start;
+}
+
+/* ---- MAIN CONTENT ---- */
+.project-main__image {
+    position: relative;
+    height: 400px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--sp-4);
+}
+
+.project-main__placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-gray) 0%, #ede0e7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: rgba(155, 32, 97, 0.15);
+}
+
+.project-main__desc {
+    margin-bottom: var(--sp-5);
+}
+
+.project-main__desc h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-2);
+}
+
+.project-main__desc p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 2;
+    margin-bottom: var(--sp-2);
+}
+
+/* Progress Section */
+.project-main__progress {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: var(--sp-3);
+    box-shadow: var(--shadow-card);
+    margin-bottom: var(--sp-5);
+}
+
+.project-main__progress h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-2);
+}
+
+.project-main__progress .progress-bar {
+    margin-bottom: var(--sp-2);
+}
+
+.project-progress-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--sp-2);
+}
+
+.project-progress-stats .stat-box {
+    flex: 1;
+    text-align: center;
+    padding: var(--sp-2);
+    background: var(--bg-gray);
+    border-radius: var(--radius-sm);
+}
+
+.project-progress-stats .stat-box span {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.project-progress-stats .stat-box strong {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.project-progress-stats .stat-box strong.accent {
+    color: var(--accent);
+}
+
+/* Campaign Details List */
+.project-details {
+    margin-bottom: var(--sp-5);
+}
+
+.project-details h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-2);
+}
+
+.project-details__list {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.project-details__item {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    padding: var(--sp-2) var(--sp-3);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-details__item:last-child {
+    border-bottom: none;
+}
+
+.project-details__item i {
+    width: 36px;
+    height: 36px;
+    background: var(--bg-gray);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.project-details__item .detail-label {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.project-details__item .detail-value {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+/* Updates Section */
+.project-updates {
+    margin-bottom: var(--sp-5);
+}
+
+.project-updates h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-3);
+}
+
+.update-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: var(--sp-3);
+    box-shadow: var(--shadow-card);
+    margin-bottom: var(--sp-2);
+    border-right: 3px solid var(--accent);
+    transition: all 0.25s var(--ease-out);
+}
+
+.update-card:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+.update-card__date {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: var(--sp-1);
+}
+
+.update-card__date i {
+    color: var(--accent);
+}
+
+.update-card h4 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+.update-card p {
+    font-size: 0.86rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Gallery Section */
+.project-gallery {
+    margin-bottom: var(--sp-5);
+}
+
+.project-gallery h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-3);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-2);
+}
+
+.gallery-grid__item {
+    height: 160px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-gray) 0%, #ede0e7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: rgba(155, 32, 97, 0.12);
+    transition: all 0.3s var(--ease-out);
+    cursor: pointer;
+}
+
+.gallery-grid__item:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-card-hover);
+}
+
+/* ---- SIDEBAR ---- */
+.project-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+/* Donation Widget */
+.donation-widget {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--sp-3);
+    margin-bottom: var(--sp-3);
+    border-top: 3px solid var(--accent);
+}
+
+.donation-widget h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-2);
+    text-align: center;
+}
+
+.donation-amounts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-1);
+    margin-bottom: var(--sp-2);
+}
+
+.donation-amount-btn {
+    padding: 10px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-out);
+    text-align: center;
+}
+
+.donation-amount-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.donation-amount-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.donation-custom {
+    position: relative;
+    margin-bottom: var(--sp-2);
+}
+
+.donation-custom input {
+    width: 100%;
+    padding: 10px var(--sp-2);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem;
+    font-family: inherit;
+    text-align: center;
+    transition: border-color 0.2s var(--ease-out);
+    outline: none;
+}
+
+.donation-custom input:focus {
+    border-color: var(--accent);
+}
+
+.donation-custom input::placeholder {
+    color: var(--text-muted);
+}
+
+.donation-submit {
+    width: 100%;
+    padding: 12px;
+    background: var(--gradient-warm);
+    color: var(--dark);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.25s var(--ease-out);
+}
+
+.donation-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(242, 119, 33, 0.3);
+}
+
+/* Campaign Info Card */
+.sidebar-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--sp-3);
+    margin-bottom: var(--sp-3);
+}
+
+.sidebar-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: var(--sp-2);
+    padding-bottom: var(--sp-1);
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-info-list {
+    list-style: none;
+}
+
+.sidebar-info-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    padding: var(--sp-1) 0;
+    font-size: 0.88rem;
+    color: var(--text-light);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-info-list li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-info-list li i {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-gray);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    flex-shrink: 0;
+}
+
+.sidebar-info-list li strong {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+/* Share Buttons Card */
+.share-buttons {
+    display: flex;
+    gap: var(--sp-1);
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    flex: 1;
+    min-width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-out);
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.share-btn--facebook {
+    background: #1877F2;
+}
+
+.share-btn--twitter {
+    background: #000;
+}
+
+.share-btn--whatsapp {
+    background: #25D366;
+}
+
+.share-btn--copy {
+    background: var(--text-light);
+}
+
+/* Related Projects */
+.related-card {
+    display: flex;
+    gap: var(--sp-2);
+    padding: var(--sp-2) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.related-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.related-card__image {
+    width: 80px;
+    height: 70px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--bg-gray) 0%, #ede0e7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: rgba(155, 32, 97, 0.12);
+}
+
+.related-card__info h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.related-card__info .related-progress {
+    height: 4px;
+    background: var(--bg-gray);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.related-card__info .related-progress__fill {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+.related-card__info span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ---- CTA SECTION (projects page) ---- */
+.projects-cta {
+    position: relative;
+    padding: 96px 0;
+    overflow: hidden;
+}
+
+.projects-cta__bg {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-dark);
+}
+
+.projects-cta__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../assets/images/bg-alaqsa.jpg') center/cover;
+    opacity: 0.08;
+}
+
+.projects-cta__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.projects-cta__content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: var(--sp-3);
+    line-height: 1.3;
+}
+
+.projects-cta__content p {
+    font-size: 1.05rem;
+    opacity: 0.8;
+    line-height: 2;
+    margin-bottom: var(--sp-4);
+    font-weight: 300;
+}
+
+.projects-cta__btns {
+    display: flex;
+    gap: var(--sp-2);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---- RESPONSIVE (Projects Pages) ---- */
+@media (max-width: 1024px) {
+    .proj-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-layout {
+        grid-template-columns: 1fr;
+        gap: var(--sp-4);
+    }
+
+    .project-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-3);
+    }
+
+    .donation-widget {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 0 64px;
+    }
+
+    .page-hero__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .proj-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .project-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .project-main__image {
+        height: 260px;
+    }
+
+    .project-progress-stats {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-cta__content h2 {
+        font-size: 1.6rem;
+    }
+
+    .floating-donate {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .proj-filters {
+        gap: 6px;
+    }
+
+    .proj-filter-btn {
+        padding: 7px 14px;
+        font-size: 0.82rem;
+    }
+
+    .campaign-card__image {
+        height: 170px;
+    }
+
+    .donation-amounts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid__item {
+        height: 140px;
+    }
+
+    .share-buttons {
+        flex-wrap: wrap;
+    }
+
+    .share-btn {
+        min-width: 40px;
+        height: 40px;
+    }
+
+    .projects-cta__content h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-main__placeholder {
+        font-size: 3rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.78rem;
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const fs = require\\(''fs''\\); const AdmZip = require\\(''adm-zip''\\) || null; console.log\\(''checking''\\);\")",
+      "Bash(npm ls adm-zip)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(taskkill //F //IM \"node.exe\" //FI \"WINDOWTITLE eq *serve*\")",
+      "Bash(npm install serve --save-dev)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 29576 //F)",
+      "Bash(node node_modules/serve/build/main.js -s . -l 5555)",
+      "Bash(timeout /t 3 /nobreak)",
+      "WebFetch(domain:yedibasak.uk)",
+      "WebFetch(domain:ihyamiras.org)",
+      "WebFetch(domain:ihh.org.tr)"
+    ]
+  }
+}

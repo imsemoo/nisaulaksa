@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام التبرع | نساء الأقصى الدولية</title>
+    <meta name="description" content="أتمم تبرعك بشكل آمن - نساء الأقصى الدولية">
+
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/donate.css">
+</head>
+<body>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">عربي</a>
+                    <a href="#">TR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="#">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="index.html#about">عن الجمعية</a></li>
+                        <li><a href="#">رؤيتنا ورسالتنا</a></li>
+                        <li><a href="#">الفريق</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                        <li><a href="index.html#projects">التعليم</a></li>
+                        <li><a href="index.html#projects">الإغاثة</a></li>
+                        <li><a href="index.html#projects">التمكين الاقتصادي</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#campaigns">الحملات</a></li>
+                <li><a href="index.html#news">الأخبار</a></li>
+                <li><a href="index.html#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="donate.html" class="btn btn--donate pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                <button class="navbar__toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO (compact) ============ -->
+    <section class="page-hero page-hero--compact">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content" data-aos="fade-up">
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>إتمام التبرع</span>
+                </nav>
+                <h1>أتمم تبرعك <span>بأمان وسهولة</span></h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DONATION CHECKOUT ============ -->
+    <section class="section donate-checkout">
+        <div class="container">
+            <div class="checkout-grid">
+
+                <!-- LEFT: Payment Form -->
+                <div class="checkout-form" data-aos="fade-up">
+
+                    <!-- Donation Type -->
+                    <div class="checkout-section">
+                        <h2 class="checkout-section__title"><i class="fas fa-hand-holding-heart"></i> نوع التبرع</h2>
+                        <div class="donation-type-grid">
+                            <label class="donation-type active" data-type="general">
+                                <input type="radio" name="donationType" value="general" checked>
+                                <div class="donation-type__card">
+                                    <i class="fas fa-donate"></i>
+                                    <strong>تبرع عام</strong>
+                                    <span>صدقة جارية</span>
+                                </div>
+                            </label>
+                            <label class="donation-type" data-type="zakat">
+                                <input type="radio" name="donationType" value="zakat">
+                                <div class="donation-type__card">
+                                    <i class="fas fa-mosque"></i>
+                                    <strong>زكاة</strong>
+                                    <span>زكاة مال</span>
+                                </div>
+                            </label>
+                            <label class="donation-type" data-type="orphan">
+                                <input type="radio" name="donationType" value="orphan">
+                                <div class="donation-type__card">
+                                    <i class="fas fa-child"></i>
+                                    <strong>كفالة يتيم</strong>
+                                    <span>دعم شهري</span>
+                                </div>
+                            </label>
+                            <label class="donation-type" data-type="emergency">
+                                <input type="radio" name="donationType" value="emergency">
+                                <div class="donation-type__card">
+                                    <i class="fas fa-truck-medical"></i>
+                                    <strong>إغاثة عاجلة</strong>
+                                    <span>مساعدات طارئة</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Amount Selection -->
+                    <div class="checkout-section">
+                        <h2 class="checkout-section__title"><i class="fas fa-coins"></i> مبلغ التبرع</h2>
+
+                        <!-- Currency Toggle -->
+                        <div class="currency-toggle">
+                            <button class="currency-btn active" data-currency="USD" data-symbol="$">$ دولار أمريكي</button>
+                            <button class="currency-btn" data-currency="TRY" data-symbol="₺">₺ ليرة تركية</button>
+                            <button class="currency-btn" data-currency="EUR" data-symbol="€">€ يورو</button>
+                        </div>
+
+                        <!-- Frequency -->
+                        <div class="frequency-toggle">
+                            <button class="freq-btn active" data-freq="once">تبرع لمرة واحدة</button>
+                            <button class="freq-btn" data-freq="monthly">تبرع شهري <span class="badge-new">موصى به</span></button>
+                        </div>
+
+                        <!-- Amount Pills -->
+                        <div class="checkout-amounts">
+                            <button class="checkout-amount-btn" data-amount="25">
+                                <span class="checkout-amount-btn__value"><span class="currency-sign">$</span>25</span>
+                                <span class="checkout-amount-btn__impact">وجبات لعائلة</span>
+                            </button>
+                            <button class="checkout-amount-btn active" data-amount="50">
+                                <span class="checkout-amount-btn__value"><span class="currency-sign">$</span>50</span>
+                                <span class="checkout-amount-btn__impact">كسوة طفل</span>
+                            </button>
+                            <button class="checkout-amount-btn" data-amount="100">
+                                <span class="checkout-amount-btn__value"><span class="currency-sign">$</span>100</span>
+                                <span class="checkout-amount-btn__impact">كفالة شهر</span>
+                            </button>
+                            <button class="checkout-amount-btn" data-amount="250">
+                                <span class="checkout-amount-btn__value"><span class="currency-sign">$</span>250</span>
+                                <span class="checkout-amount-btn__impact">دعم عائلة</span>
+                            </button>
+                            <button class="checkout-amount-btn" data-amount="500">
+                                <span class="checkout-amount-btn__value"><span class="currency-sign">$</span>500</span>
+                                <span class="checkout-amount-btn__impact">مشروع صغير</span>
+                            </button>
+                            <button class="checkout-amount-btn" data-amount="1000">
+                                <span class="checkout-amount-btn__value"><span class="currency-sign">$</span>1000</span>
+                                <span class="checkout-amount-btn__impact">كفالة سنوية</span>
+                            </button>
+                        </div>
+
+                        <!-- Custom Amount -->
+                        <div class="checkout-custom-amount">
+                            <div class="input-group">
+                                <span class="input-group__prefix currency-sign">$</span>
+                                <input type="number" id="checkoutCustomAmount" placeholder="أدخل مبلغًا آخر" min="1">
+                                <span class="input-group__suffix">USD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Info -->
+                    <div class="checkout-section">
+                        <h2 class="checkout-section__title"><i class="fas fa-user"></i> البيانات الشخصية</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>الاسم الكامل *</label>
+                                <input type="text" id="donorName" placeholder="أدخل اسمك الكامل" required>
+                            </div>
+                            <div class="form-group">
+                                <label>البريد الإلكتروني *</label>
+                                <input type="email" id="donorEmail" placeholder="example@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>رقم الهاتف *</label>
+                                <input type="tel" id="donorPhone" placeholder="+90 5XX XXX XXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label>الدولة</label>
+                                <select id="donorCountry">
+                                    <option value="">اختر الدولة</option>
+                                    <option value="TR">تركيا</option>
+                                    <option value="PS">فلسطين</option>
+                                    <option value="SA">السعودية</option>
+                                    <option value="AE">الإمارات</option>
+                                    <option value="KW">الكويت</option>
+                                    <option value="QA">قطر</option>
+                                    <option value="BH">البحرين</option>
+                                    <option value="OM">عُمان</option>
+                                    <option value="JO">الأردن</option>
+                                    <option value="LB">لبنان</option>
+                                    <option value="EG">مصر</option>
+                                    <option value="IQ">العراق</option>
+                                    <option value="SY">سوريا</option>
+                                    <option value="YE">اليمن</option>
+                                    <option value="LY">ليبيا</option>
+                                    <option value="TN">تونس</option>
+                                    <option value="DZ">الجزائر</option>
+                                    <option value="MA">المغرب</option>
+                                    <option value="SD">السودان</option>
+                                    <option value="DE">ألمانيا</option>
+                                    <option value="FR">فرنسا</option>
+                                    <option value="GB">بريطانيا</option>
+                                    <option value="US">أمريكا</option>
+                                    <option value="CA">كندا</option>
+                                    <option value="AU">أستراليا</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Gift option -->
+                        <label class="checkbox-field">
+                            <input type="checkbox" id="isGift">
+                            <span class="checkbox-field__checkmark"><i class="fas fa-check"></i></span>
+                            <span class="checkbox-field__label">أريد إهداء هذا التبرع لشخص آخر</span>
+                        </label>
+
+                        <!-- Gift fields (hidden by default) -->
+                        <div class="gift-fields" id="giftFields" style="display:none;">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>اسم المُهدى إليه</label>
+                                    <input type="text" id="giftName" placeholder="اسم الشخص">
+                                </div>
+                                <div class="form-group">
+                                    <label>بريده الإلكتروني</label>
+                                    <input type="email" id="giftEmail" placeholder="سنرسل له إشعارًا">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>رسالة الإهداء (اختياري)</label>
+                                <textarea id="giftMessage" rows="2" placeholder="اكتب رسالة تصل مع التبرع..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="checkout-section">
+                        <h2 class="checkout-section__title"><i class="fas fa-credit-card"></i> طريقة الدفع</h2>
+                        <div class="payment-methods">
+                            <label class="payment-method active">
+                                <input type="radio" name="paymentMethod" value="card" checked>
+                                <div class="payment-method__card">
+                                    <div class="payment-method__icons">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                    </div>
+                                    <strong>بطاقة ائتمان / خصم</strong>
+                                </div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="paymentMethod" value="bank">
+                                <div class="payment-method__card">
+                                    <div class="payment-method__icons">
+                                        <i class="fas fa-building-columns"></i>
+                                    </div>
+                                    <strong>تحويل بنكي</strong>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Card Fields -->
+                        <div class="card-fields" id="cardFields">
+                            <div class="form-group">
+                                <label>رقم البطاقة</label>
+                                <div class="card-input">
+                                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19">
+                                    <div class="card-input__icons">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>تاريخ الانتهاء</label>
+                                    <input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7">
+                                </div>
+                                <div class="form-group">
+                                    <label>رمز الأمان (CVV)</label>
+                                    <div class="cvv-input">
+                                        <input type="text" id="cardCvv" placeholder="123" maxlength="4">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bank Transfer Info (hidden by default) -->
+                        <div class="bank-info" id="bankInfo" style="display:none;">
+                            <div class="bank-info__card">
+                                <h4><i class="fas fa-info-circle"></i> معلومات التحويل البنكي</h4>
+                                <div class="bank-info__row">
+                                    <span>اسم البنك:</span>
+                                    <strong>Ziraat Bankası</strong>
+                                </div>
+                                <div class="bank-info__row">
+                                    <span>اسم الحساب:</span>
+                                    <strong>Aksa Kadınları Derneği</strong>
+                                </div>
+                                <div class="bank-info__row">
+                                    <span>IBAN (TRY):</span>
+                                    <strong class="iban-code">TR00 0001 0000 0000 0000 0000 00</strong>
+                                    <button class="copy-btn" data-copy="TR00000100000000000000000000"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <div class="bank-info__row">
+                                    <span>IBAN (USD):</span>
+                                    <strong class="iban-code">TR00 0001 0000 0000 0000 0000 01</strong>
+                                    <button class="copy-btn" data-copy="TR00000100000000000000000001"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <div class="bank-info__row">
+                                    <span>SWIFT:</span>
+                                    <strong>TCZBTR2AXXX</strong>
+                                    <button class="copy-btn" data-copy="TCZBTR2AXXX"><i class="fas fa-copy"></i></button>
+                                </div>
+                                <p class="bank-info__note"><i class="fas fa-exclamation-triangle"></i> يرجى إرسال إيصال التحويل عبر البريد الإلكتروني: info@aksakadinlari.org</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button class="donate-submit-btn" id="submitDonation">
+                        <i class="fas fa-lock"></i>
+                        <span>إتمام التبرع بقيمة <strong id="submitAmount">$50</strong></span>
+                    </button>
+
+                    <!-- Security badges -->
+                    <div class="checkout-security">
+                        <span><i class="fas fa-shield-halved"></i> تبرع آمن 100%</span>
+                        <span><i class="fas fa-lock"></i> تشفير SSL</span>
+                        <span><i class="fas fa-certificate"></i> جمعية مرخصة</span>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Order Summary Sidebar -->
+                <div class="checkout-sidebar" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sidebar-card">
+                        <div class="sidebar-card__header">
+                            <h3><i class="fas fa-receipt"></i> ملخص التبرع</h3>
+                        </div>
+                        <div class="sidebar-card__body">
+                            <div class="summary-item">
+                                <span class="summary-item__label">نوع التبرع</span>
+                                <span class="summary-item__value" id="summaryType">تبرع عام</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-item__label">التكرار</span>
+                                <span class="summary-item__value" id="summaryFreq">مرة واحدة</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-item__label">العملة</span>
+                                <span class="summary-item__value" id="summaryCurrency">دولار أمريكي</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-total">
+                                <span>المبلغ الإجمالي</span>
+                                <strong id="summaryTotal">$50</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Impact Card -->
+                    <div class="sidebar-card sidebar-card--impact">
+                        <div class="sidebar-card__header sidebar-card__header--accent">
+                            <h3><i class="fas fa-lightbulb"></i> أثر تبرعك</h3>
+                        </div>
+                        <div class="sidebar-card__body">
+                            <div class="impact-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>$25 = وجبات لعائلة لمدة أسبوع</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-tshirt"></i>
+                                <span>$50 = كسوة كاملة لطفل</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-book"></i>
+                                <span>$100 = كفالة يتيم لشهر</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-house"></i>
+                                <span>$500 = دعم سكن لعائلة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust Card -->
+                    <div class="sidebar-card sidebar-card--trust">
+                        <div class="trust-item">
+                            <i class="fas fa-shield-halved"></i>
+                            <div>
+                                <strong>تبرع آمن ومشفر</strong>
+                                <span>بياناتك محمية بتشفير SSL 256-bit</span>
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-file-invoice"></i>
+                            <div>
+                                <strong>إيصال ضريبي</strong>
+                                <span>نوفر إيصالات رسمية لجميع التبرعات</span>
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <strong>دعم على مدار الساعة</strong>
+                                <span>+90 342 325 1030</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية — نعمل على دعم المرأة والطفل في المناطق المحتاجة وتقديم يد العون للأسر المتضررة.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="index.html#about">من نحن</a></li>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="index.html#campaigns">الحملات</a></li>
+                            <li><a href="index.html#news">الأخبار</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="#">الإغاثة الطارئة</a></li>
+                            <li><a href="#">التعليم والتدريب</a></li>
+                            <li><a href="#">التمكين الاقتصادي</a></li>
+                            <li><a href="#">المشاريع الصحية</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك لتصلك آخر أخبارنا وقصص النجاح</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                جميع الحقوق محفوظة &copy; 2024 نساء الأقصى الدولية | Aksa Kadınları Derneği
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/donate.js"></script>
+</body>
+</html>

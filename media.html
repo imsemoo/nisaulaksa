@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المركز الإعلامي | نساء الأقصى الدولية</title>
+    <meta name="description" content="المركز الإعلامي لجمعية نساء الأقصى الدولية — آخر الأخبار والتقارير ومعرض الصور والفيديوهات والتغطيات الصحفية">
+
+    <link rel="preload" href="assets/fonts/Expo Arabic Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/Expo Arabic Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/logo-ar.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+    <!-- ============ PRELOADER ============ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <img src="assets/images/logo-ar.png" alt="" class="preloader__logo">
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__right">
+                <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
+                <span class="top-bar__divider"></span>
+                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+            </div>
+            <div class="top-bar__left">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <div class="lang-switcher">
+                    <a href="#" class="active">عربي</a>
+                    <a href="#">TR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+            </a>
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="has-dropdown">
+                    <a href="about.html">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="about.html">عن الجمعية</a></li>
+                        <li><a href="about.html#vision">رؤيتنا ورسالتنا</a></li>
+                        <li><a href="about.html#team">الفريق</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                        <li><a href="#">التعليم</a></li>
+                        <li><a href="#">الإغاثة</a></li>
+                    </ul>
+                </li>
+                <li><a href="activities.html">أنشطتنا</a></li>
+                <li><a href="media.html" class="active">المركز الإعلامي</a></li>
+                <li><a href="index.html#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <a href="donate.html" class="btn btn--donate pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                <button class="navbar__toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="container">
+            <div class="page-hero__content" data-aos="fade-up">
+                <nav class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>المركز الإعلامي</span>
+                </nav>
+                <h1>المركز الإعلامي <span>آخر الأخبار والتغطيات والوسائط</span></h1>
+                <p>تابع آخر أخبار جمعية نساء الأقصى الدولية، واستعرض معرض الصور والفيديوهات والتغطيات الصحفية لأنشطتنا ومشاريعنا</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MEDIA TABS ============ -->
+    <section class="section media-center" id="media-center">
+        <div class="container">
+
+            <!-- Tab Navigation -->
+            <div class="media-tabs" data-aos="fade-up">
+                <button class="media-tabs__btn active" data-tab="tab-news">
+                    <i class="fas fa-newspaper"></i> الأخبار
+                </button>
+                <button class="media-tabs__btn" data-tab="tab-photos">
+                    <i class="fas fa-images"></i> معرض الصور
+                </button>
+                <button class="media-tabs__btn" data-tab="tab-videos">
+                    <i class="fas fa-video"></i> الفيديوهات
+                </button>
+                <button class="media-tabs__btn" data-tab="tab-press">
+                    <i class="fas fa-bullhorn"></i> تغطيات صحفية
+                </button>
+            </div>
+
+            <!-- ======== NEWS TAB ======== -->
+            <div class="tab-panel active" id="tab-news">
+                <div class="news-grid">
+
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="news-card__image">
+                            <div class="news-card__placeholder">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <span class="news-card__date"><i class="far fa-calendar-alt"></i> 15 مارس 2024</span>
+                            <span class="news-card__category news-card__category--relief">إغاثة</span>
+                        </div>
+                        <div class="news-card__body">
+                            <h3 class="news-card__title">نساء الأقصى تطلق حملة إغاثة جديدة في غزة</h3>
+                            <p class="news-card__excerpt">أطلقت جمعية نساء الأقصى الدولية حملة إغاثة عاجلة لدعم العائلات المتضررة في قطاع غزة، تشمل توزيع مواد غذائية وطبية ومستلزمات أساسية...</p>
+                            <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="news-card__image">
+                            <div class="news-card__placeholder">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="news-card__date"><i class="far fa-calendar-alt"></i> 8 فبراير 2024</span>
+                            <span class="news-card__category news-card__category--conference">مؤتمرات</span>
+                        </div>
+                        <div class="news-card__body">
+                            <h3 class="news-card__title">مؤتمر دولي حول حقوق المرأة الفلسطينية</h3>
+                            <p class="news-card__excerpt">نثمت الجمعية مؤتمرًا دوليًا بمشاركة خبراء ومنظمات دولية لمناقشة واقع المرأة الفلسطينية وسبل تعزيز حقوقها في ظل الظروف الراهنة...</p>
+                            <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="news-card__image">
+                            <div class="news-card__placeholder">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <span class="news-card__date"><i class="far fa-calendar-alt"></i> 20 يناير 2024</span>
+                            <span class="news-card__category news-card__category--projects">مشاريع</span>
+                        </div>
+                        <div class="news-card__body">
+                            <h3 class="news-card__title">توزيع مساعدات شتوية على 500 عائلة</h3>
+                            <p class="news-card__excerpt">في إطار مشروع الشتاء الدافئ، وزعت الجمعية مساعدات شتوية شاملة على أكثر من 500 عائلة محتاجة في عدة مناطق متضررة...</p>
+                            <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="news-card__image">
+                            <div class="news-card__placeholder">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <span class="news-card__date"><i class="far fa-calendar-alt"></i> 5 يناير 2024</span>
+                            <span class="news-card__category news-card__category--education">تعليم</span>
+                        </div>
+                        <div class="news-card__body">
+                            <h3 class="news-card__title">افتتاح مركز تعليمي جديد للأيتام</h3>
+                            <p class="news-card__excerpt">افتتحت الجمعية مركزًا تعليميًا جديدًا يضم فصولًا دراسية مجهزة ومكتبة ومختبر حاسوب لخدمة أكثر من 200 يتيم في المنطقة...</p>
+                            <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="news-card__image">
+                            <div class="news-card__placeholder">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <span class="news-card__date"><i class="far fa-calendar-alt"></i> 28 ديسمبر 2023</span>
+                            <span class="news-card__category news-card__category--sponsorship">كفالة</span>
+                        </div>
+                        <div class="news-card__body">
+                            <h3 class="news-card__title">حملة كفالة الأيتام تحقق أهدافها السنوية</h3>
+                            <p class="news-card__excerpt">حققت حملة كفالة الأيتام أهدافها السنوية بنجاح حيث تمت كفالة أكثر من 500 يتيم جديد خلال العام، بفضل تبرعات المحسنين...</p>
+                            <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="news-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="news-card__image">
+                            <div class="news-card__placeholder">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <span class="news-card__date"><i class="far fa-calendar-alt"></i> 15 ديسمبر 2023</span>
+                            <span class="news-card__category news-card__category--activities">أنشطة</span>
+                        </div>
+                        <div class="news-card__body">
+                            <h3 class="news-card__title">تكريم المتطوعين المتميزين لعام 2023</h3>
+                            <p class="news-card__excerpt">أقامت الجمعية حفلًا لتكريم المتطوعين الذين قدموا جهودًا استثنائية خلال العام، تقديرًا لعطائهم وتفانيهم في خدمة المحتاجين...</p>
+                            <a href="#" class="news-card__link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ======== PHOTOS TAB ======== -->
+            <div class="tab-panel" id="tab-photos">
+                <div class="gallery-grid">
+
+                    <div class="gallery-item gallery-item--tall" data-aos="fade-up" data-aos-delay="0">
+                        <div class="gallery-item__placeholder" style="background: linear-gradient(135deg, #f5e6ee, #ede0e7);">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>حملة إغاثة غزة 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="50">
+                        <div class="gallery-item__placeholder" style="background: linear-gradient(135deg, #e8f0e8, #d4e4d4);">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>أيتام مكفولون</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="gallery-item__placeholder" style="background: linear-gradient(135deg, #e6eaf5, #d0d8ed);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>المركز التعليمي</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item gallery-item--tall" data-aos="fade-up" data-aos-delay="150">
+                        <div class="gallery-item__placeholder" style="background: linear-gradient(135deg, #f5f0e6, #ede5d4);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>المؤتمر الدولي 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="gallery-item__placeholder" style="background: linear-gradient(135deg, #f5e6e6, #eddddd);">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>توزيع المساعدات الشتوية</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
+                        <div class="gallery-item__placeholder" style="background: linear-gradient(135deg, #e6f5f0, #d4ede5);">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>الرعاية الصحية</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item gallery-item--tall" data-aos="fade-up" data-aos-delay="300">
+                        <div class="gallery-item__placeholder" style="background: linear-gradient(135deg, #f0e6f5, #e5d4ed);">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>فعاليات رمضان</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
+                        <div class="gallery-item__placeholder" style="background: linear-gradient(135deg, #f5ece6, #ede2d4);">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="gallery-item__overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>حفل تكريم المتطوعين</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ======== VIDEOS TAB ======== -->
+            <div class="tab-panel" id="tab-videos">
+                <div class="videos-grid">
+
+                    <div class="video-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="video-card__thumbnail">
+                            <div class="video-card__placeholder">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <div class="video-card__play">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <span class="video-card__duration">4:32</span>
+                        </div>
+                        <div class="video-card__info">
+                            <h3>قصة كفالة تغيّر حياة</h3>
+                            <p>قصة مؤثرة عن يتيم تغيرت حياته بالكامل بفضل برنامج الكفالة</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="video-card__thumbnail">
+                            <div class="video-card__placeholder">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="video-card__play">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <span class="video-card__duration">6:15</span>
+                        </div>
+                        <div class="video-card__info">
+                            <h3>رحلة إغاثة إلى غزة</h3>
+                            <p>توثيق لرحلة فريق الإغاثة خلال تقديم المساعدات للعائلات المتضررة</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="video-card__thumbnail">
+                            <div class="video-card__placeholder">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="video-card__play">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <span class="video-card__duration">12:40</span>
+                        </div>
+                        <div class="video-card__info">
+                            <h3>مؤتمر المرأة الدولي 2024</h3>
+                            <p>أبرز فعاليات المؤتمر الدولي حول حقوق المرأة الفلسطينية وتوصياته</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="video-card__thumbnail">
+                            <div class="video-card__placeholder">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="video-card__play">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <span class="video-card__duration">3:20</span>
+                        </div>
+                        <div class="video-card__info">
+                            <h3>كيف يصل تبرعك</h3>
+                            <p>تعرف على رحلة تبرعك من لحظة التبرع حتى وصوله للمستفيد</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ======== PRESS TAB ======== -->
+            <div class="tab-panel" id="tab-press">
+
+                <!-- Media Outlet Logos -->
+                <div class="press-logos" data-aos="fade-up">
+                    <h3 class="press-logos__title">شركاؤنا الإعلاميون</h3>
+                    <div class="press-logos__grid">
+                        <div class="press-logo">
+                            <div class="press-logo__placeholder"><i class="fas fa-tv"></i><span>الجزيرة</span></div>
+                        </div>
+                        <div class="press-logo">
+                            <div class="press-logo__placeholder"><i class="fas fa-satellite-dish"></i><span>TRT عربي</span></div>
+                        </div>
+                        <div class="press-logo">
+                            <div class="press-logo__placeholder"><i class="fas fa-broadcast-tower"></i><span>العربية</span></div>
+                        </div>
+                        <div class="press-logo">
+                            <div class="press-logo__placeholder"><i class="fas fa-newspaper"></i><span>الأناضول</span></div>
+                        </div>
+                        <div class="press-logo">
+                            <div class="press-logo__placeholder"><i class="fas fa-globe"></i><span>رويترز</span></div>
+                        </div>
+                        <div class="press-logo">
+                            <div class="press-logo__placeholder"><i class="fas fa-rss"></i><span>وفا</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Press Releases -->
+                <div class="press-releases" data-aos="fade-up">
+                    <h3 class="press-releases__title">البيانات الصحفية</h3>
+                    <div class="press-releases__grid">
+
+                        <div class="press-card">
+                            <div class="press-card__icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="press-card__content">
+                                <span class="press-card__date">10 مارس 2024</span>
+                                <h4>بيان صحفي: إطلاق حملة إغاثة طارئة لقطاع غزة</h4>
+                                <p>تعلن جمعية نساء الأقصى الدولية عن إطلاق حملة إغاثة عاجلة لمساعدة المتضررين في قطاع غزة...</p>
+                            </div>
+                            <a href="#" class="press-card__btn"><i class="fas fa-download"></i> تحميل PDF</a>
+                        </div>
+
+                        <div class="press-card">
+                            <div class="press-card__icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="press-card__content">
+                                <span class="press-card__date">1 فبراير 2024</span>
+                                <h4>بيان صحفي: نتائج المؤتمر الدولي حول حقوق المرأة الفلسطينية</h4>
+                                <p>اختتم المؤتمر أعماله بتوصيات مهمة تدعو المجتمع الدولي لتعزيز حماية حقوق المرأة الفلسطينية...</p>
+                            </div>
+                            <a href="#" class="press-card__btn"><i class="fas fa-download"></i> تحميل PDF</a>
+                        </div>
+
+                        <div class="press-card">
+                            <div class="press-card__icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="press-card__content">
+                                <span class="press-card__date">15 يناير 2024</span>
+                                <h4>تقرير سنوي: إنجازات جمعية نساء الأقصى لعام 2023</h4>
+                                <p>يستعرض التقرير أبرز إنجازات الجمعية خلال عام 2023 من مشاريع وحملات وأنشطة إنسانية...</p>
+                            </div>
+                            <a href="#" class="press-card__btn"><i class="fas fa-download"></i> تحميل PDF</a>
+                        </div>
+
+                        <div class="press-card">
+                            <div class="press-card__icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="press-card__content">
+                                <span class="press-card__date">20 ديسمبر 2023</span>
+                                <h4>بيان صحفي: نجاح حملة كفالة الأيتام السنوية</h4>
+                                <p>تعلن الجمعية عن تحقيق أهداف حملة كفالة الأيتام السنوية بكفالة أكثر من 500 يتيم جديد...</p>
+                            </div>
+                            <a href="#" class="press-card__btn"><i class="fas fa-download"></i> تحميل PDF</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta">
+        <div class="cta__bg"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2>كن جزءًا من قصة التغيير</h2>
+                <p>تبرعك يصنع الفارق في حياة آلاف المحتاجين — ساهم معنا اليوم</p>
+                <div class="cta__btns">
+                    <a href="donate.html" class="btn btn--donate btn--lg pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
+                    <a href="index.html#contact" class="btn btn--outline-light btn--lg"><i class="fas fa-phone-alt"></i> تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية" class="footer__logo">
+                        <p>جمعية نساء الأقصى الدولية — نعمل على دعم المرأة والطفل في المناطق المحتاجة وتقديم يد العون للأسر المتضررة.</p>
+                        <div class="footer__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="activities.html">أنشطتنا</a></li>
+                            <li><a href="media.html">المركز الإعلامي</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>مشاريعنا</h3>
+                        <ul>
+                            <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                            <li><a href="#">الإغاثة الطارئة</a></li>
+                            <li><a href="#">التعليم والتدريب</a></li>
+                            <li><a href="#">التمكين الاقتصادي</a></li>
+                            <li><a href="#">المشاريع الصحية</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3>النشرة البريدية</h3>
+                        <p>اشترك لتصلك آخر أخبارنا وقصص النجاح</p>
+                        <form class="footer__newsletter">
+                            <input type="email" placeholder="بريدك الإلكتروني">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                جميع الحقوق محفوظة &copy; 2024 نساء الأقصى الدولية | Aksa Kadınları Derneği
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ============ FLOATING DONATE (mobile) ============ -->
+    <a href="donate.html" class="floating-donate"><i class="fas fa-heart"></i> تبرع الآن</a>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox__overlay"></div>
+        <button class="lightbox__close"><i class="fas fa-times"></i></button>
+        <button class="lightbox__prev"><i class="fas fa-chevron-right"></i></button>
+        <button class="lightbox__next"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox__content">
+            <div class="lightbox__image-wrapper">
+                <div class="lightbox__placeholder" id="lightboxImage">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+            <div class="lightbox__caption" id="lightboxCaption"></div>
+        </div>
+        <div class="lightbox__counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/media.js"></script>
+</body>
+</html>
