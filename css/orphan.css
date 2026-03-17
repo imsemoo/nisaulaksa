@@ -375,7 +375,7 @@
     border-color: var(--dark);
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(40, 5, 27, 0.2);
+    box-shadow: 0 8px 24px rgba(27, 27, 47, 0.2);
 }
 
 /* ---- ORPHAN PROFILES ---- */
@@ -448,7 +448,7 @@
     align-items: center;
     justify-content: center;
     font-size: 3.5rem;
-    color: rgba(155, 32, 97, 0.15);
+    color: rgba(197, 25, 138, 0.15);
 }
 
 .orphan-card__tag {

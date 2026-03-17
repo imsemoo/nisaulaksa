@@ -300,7 +300,7 @@
     gap: 8px;
     width: 100%;
     padding: 12px 20px;
-    background: var(--gradient);
+    background: var(--primary);
     color: #fff;
     border: none;
     border-radius: var(--radius-pill);

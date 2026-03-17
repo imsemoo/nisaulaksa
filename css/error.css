@@ -33,10 +33,7 @@
 .error-illustration__number {
     font-size: clamp(6rem, 15vw, 10rem);
     font-weight: 700;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary);
     line-height: 1;
 }
 
@@ -44,7 +41,7 @@
     width: clamp(70px, 12vw, 100px);
     height: clamp(70px, 12vw, 100px);
     border-radius: 50%;
-    background: var(--gradient);
+    background: var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;

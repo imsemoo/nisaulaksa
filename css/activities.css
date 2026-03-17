@@ -154,7 +154,7 @@
     align-items: center;
     justify-content: center;
     font-size: 3.5rem;
-    color: rgba(155, 32, 97, 0.15);
+    color: rgba(197, 25, 138, 0.15);
     transition: all 0.4s var(--ease-out);
 }
 
@@ -193,7 +193,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
-    box-shadow: 0 4px 16px rgba(155, 32, 97, 0.15);
+    box-shadow: 0 4px 16px rgba(197, 25, 138, 0.15);
     transition: all 0.3s var(--ease-out);
 }
 

@@ -137,7 +137,7 @@
 
 .vid-thumbnail__placeholder i {
     font-size: 5rem;
-    color: rgba(155, 32, 97, 0.15);
+    color: rgba(197, 25, 138, 0.15);
     transition: color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 }
 
@@ -146,7 +146,7 @@
 }
 
 .vid-thumbnail:hover .vid-thumbnail__placeholder i {
-    color: rgba(155, 32, 97, 0.25);
+    color: rgba(197, 25, 138, 0.25);
 }
 
 /* ---- Featured Play Button ---- */
@@ -157,7 +157,7 @@
     transform: translate(-50%, -50%) scale(0.85);
     width: 64px;
     height: 64px;
-    background: var(--gradient);
+    background: var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -345,7 +345,7 @@
     position: absolute;
     bottom: 12px;
     left: 12px;
-    background: rgba(40, 5, 27, 0.8);
+    background: rgba(27, 27, 47, 0.8);
     color: #fff;
     padding: 2px 8px;
     border-radius: var(--radius-sm);
@@ -363,7 +363,7 @@
     transform: translate(-50%, -50%) scale(0.7);
     width: 48px;
     height: 48px;
-    background: var(--gradient);
+    background: var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;

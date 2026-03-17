@@ -567,8 +567,8 @@
     padding: 20px;
     border: none;
     border-radius: var(--radius-pill);
-    background: var(--gradient-warm);
-    color: var(--dark);
+    background: var(--primary);
+    color: #fff;
     font-family: inherit;
     font-size: 1.15rem;
     font-weight: 700;

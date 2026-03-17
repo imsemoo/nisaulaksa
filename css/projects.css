@@ -154,7 +154,7 @@
     align-items: center;
     justify-content: center;
     font-size: 3.5rem;
-    color: rgba(155, 32, 97, 0.15);
+    color: rgba(197, 25, 138, 0.15);
     transition: all 0.4s var(--ease-out);
 }
 
@@ -302,7 +302,7 @@
     align-items: center;
     justify-content: center;
     font-size: 5rem;
-    color: rgba(155, 32, 97, 0.15);
+    color: rgba(197, 25, 138, 0.15);
 }
 
 .project-main__desc {
@@ -509,7 +509,7 @@
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
-    color: rgba(155, 32, 97, 0.12);
+    color: rgba(197, 25, 138, 0.12);
     transition: all 0.3s var(--ease-out);
     cursor: pointer;
 }
@@ -603,8 +603,8 @@
 .donation-submit {
     width: 100%;
     padding: 12px;
-    background: var(--gradient-warm);
-    color: var(--dark);
+    background: var(--primary);
+    color: #fff;
     border: none;
     border-radius: var(--radius-sm);
     font-weight: 700;
@@ -744,7 +744,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: rgba(155, 32, 97, 0.12);
+    color: rgba(197, 25, 138, 0.12);
 }
 
 .related-card__info h4 {
@@ -765,7 +765,7 @@
 
 .related-card__info .related-progress__fill {
     height: 100%;
-    background: var(--gradient);
+    background: var(--primary);
     border-radius: 2px;
 }
 

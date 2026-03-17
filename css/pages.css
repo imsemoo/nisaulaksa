@@ -220,14 +220,14 @@
 }
 
 .result-card__btns .btn--primary {
-    background: var(--gradient);
+    background: var(--primary);
     color: #fff;
     border-color: transparent;
 }
 
 .result-card__btns .btn--primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(155, 32, 97, 0.3);
+    box-shadow: 0 4px 16px rgba(197, 25, 138, 0.3);
 }
 
 .result-card__btns .btn--outline {
@@ -367,7 +367,7 @@
     right: 0;
     width: 60px;
     height: 2px;
-    background: var(--gradient);
+    background: var(--primary);
     border-radius: 2px;
 }
 

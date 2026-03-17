@@ -6,13 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- PRELOADER ----
     const preloader = document.getElementById('preloader');
-    window.addEventListener('load', () => {
-        setTimeout(() => preloader.classList.add('hidden'), 600);
-    });
-    // Fallback if load already fired
-    if (document.readyState === 'complete') {
-        setTimeout(() => preloader.classList.add('hidden'), 600);
+    function hidePreloader() {
+        if (!preloader.classList.contains('hidden')) {
+            preloader.classList.add('hidden');
+        }
     }
+    // Hide on page load (with small delay for smoothness)
+    window.addEventListener('load', () => setTimeout(hidePreloader, 400));
+    // Fallback if load already fired
+    if (document.readyState === 'complete') setTimeout(hidePreloader, 400);
+    // Force hide after 2 seconds max regardless of load state
+    setTimeout(hidePreloader, 2000);
 
     // ---- AOS ----
     AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 80 });

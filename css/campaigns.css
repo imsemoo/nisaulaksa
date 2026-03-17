@@ -84,7 +84,7 @@
 /* ---- FEATURED CAMPAIGN ---- */
 .camp-featured {
     padding: var(--sp-8) 0;
-    background: var(--gradient-warm);
+    background: var(--primary);
     position: relative;
     overflow: hidden;
 }
@@ -250,7 +250,7 @@
     align-items: center;
     justify-content: center;
     font-size: 3.5rem;
-    color: rgba(155, 32, 97, 0.15);
+    color: rgba(197, 25, 138, 0.15);
     transition: all 0.4s var(--ease-out);
 }
 
@@ -289,7 +289,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
-    box-shadow: 0 4px 16px rgba(155, 32, 97, 0.15);
+    box-shadow: 0 4px 16px rgba(197, 25, 138, 0.15);
     transition: all 0.3s var(--ease-out);
 }
 
@@ -392,7 +392,7 @@
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    color: rgba(155, 32, 97, 0.15);
+    color: rgba(197, 25, 138, 0.15);
     transition: all 0.4s var(--ease-out);
 }
 
@@ -452,7 +452,7 @@
 
 .camp-active-card__progress-fill {
     height: 100%;
-    background: var(--gradient);
+    background: var(--primary);
     border-radius: var(--radius-pill);
     width: 0;
     transition: width 1.5s var(--ease-out);
@@ -513,7 +513,7 @@
     right: var(--sp-3);
     width: 32px;
     height: 32px;
-    background: var(--gradient);
+    background: var(--primary);
     color: #fff;
     border-radius: 50%;
     display: flex;
