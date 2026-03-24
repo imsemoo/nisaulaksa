@@ -34,18 +34,19 @@
             <div class="top-bar__right">
                 <a href="mailto:info@aksakadinlari.org"><i class="fas fa-envelope"></i> info@aksakadinlari.org</a>
                 <span class="top-bar__divider"></span>
-                <a href="tel:+903423251030"><i class="fas fa-phone-alt"></i> +90 342 325 1030</a>
+                <a href="tel:+905001234567"><i class="fas fa-phone-flip"></i> +90 500 123 45 67</a>
             </div>
             <div class="top-bar__left">
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
                 </div>
                 <div class="lang-switcher">
-                    <a href="#" class="active">عربي</a>
-                    <a href="#">TR</a>
+                    <a href="#" class="active">العربية</a>
+                    <a href="#">Türkçe</a>
+                    <a href="#">English</a>
                 </div>
             </div>
         </div>
@@ -55,33 +56,110 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="navbar__logo">
-                <img src="assets/images/logo-ar.png" alt="نساء الأقصى الدولية">
+                <img src="assets/images/logo-ar.png" alt="نساء الأقصى">
             </a>
             <ul class="navbar__menu" id="navMenu">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li class="has-dropdown">
-                    <a href="about.html" class="active">من نحن <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="about.html">عن الجمعية</a></li>
-                        <li><a href="about.html#vision">رؤيتنا ورسالتنا</a></li>
-                        <li><a href="about.html#team">الفريق</a></li>
-                    </ul>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+
+                <!-- من نحن — Mega Menu -->
+                <li class="has-mega">
+                    <a href="about.html">من نحن <i class="fas fa-chevron-down"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu__inner">
+                            <div class="mega-menu__col">
+                                <h4><i class="fas fa-info-circle"></i> عن الجمعية</h4>
+                                <ul>
+                                    <li><a href="about.html">من نحن</a></li>
+                                    <li><a href="about.html#vision">رؤيتنا ورسالتنا</a></li>
+                                    <li><a href="about.html#team">فريق العمل</a></li>
+                                    <li><a href="reports.html">التقارير والشفافية</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu__col">
+                                <h4><i class="fas fa-file-alt"></i> صفحات قانونية</h4>
+                                <ul>
+                                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                                    <li><a href="terms.html">الشروط والأحكام</a></li>
+                                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu__col mega-menu__col--highlight">
+                                <div class="mega-menu__cta">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                    <h4>انضم لفريقنا</h4>
+                                    <p>تطوع معنا وساهم في صناعة التغيير</p>
+                                    <a href="volunteer.html" class="btn btn--primary btn--sm">تطوع الآن</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                <li class="has-dropdown">
-                    <a href="#">مشاريعنا <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
-                        <li><a href="#">التعليم</a></li>
-                        <li><a href="#">الإغاثة</a></li>
-                    </ul>
+
+                <!-- مشاريعنا — Mega Menu -->
+                <li class="has-mega">
+                    <a href="projects.html">مشاريعنا <i class="fas fa-chevron-down"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu__inner">
+                            <div class="mega-menu__col">
+                                <h4><i class="fas fa-project-diagram"></i> المشاريع</h4>
+                                <ul>
+                                    <li><a href="projects.html">جميع المشاريع</a></li>
+                                    <li><a href="campaigns.html">الحملات</a></li>
+                                    <li><a href="orphan-sponsorship.html">كفالة الأيتام</a></li>
+                                    <li><a href="project-single.html">تفاصيل مشروع</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu__col">
+                                <h4><i class="fas fa-donate"></i> التبرع</h4>
+                                <ul>
+                                    <li><a href="donate.html">تبرع الآن</a></li>
+                                    <li><a href="donation-success.html">تأكيد التبرع</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu__col mega-menu__col--highlight">
+                                <div class="mega-menu__cta">
+                                    <i class="fas fa-heart"></i>
+                                    <h4>حملة غزة العاجلة</h4>
+                                    <p>ساهم في إغاثة أهلنا في غزة الآن</p>
+                                    <a href="donate.html" class="btn btn--primary btn--sm">تبرع الآن</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
+
                 <li><a href="activities.html">أنشطتنا</a></li>
-                <li><a href="media.html">المركز الإعلامي</a></li>
-                <li><a href="index.html#contact">تواصل معنا</a></li>
+
+                <!-- المركز الإعلامي — Mega Menu -->
+                <li class="has-mega">
+                    <a href="media.html">المركز الإعلامي <i class="fas fa-chevron-down"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu__inner">
+                            <div class="mega-menu__col">
+                                <h4><i class="fas fa-newspaper"></i> الأخبار</h4>
+                                <ul>
+                                    <li><a href="news.html">جميع الأخبار</a></li>
+                                    <li><a href="media.html">المركز الإعلامي</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu__col">
+                                <h4><i class="fas fa-photo-video"></i> الوسائط</h4>
+                                <ul>
+                                    <li><a href="gallery.html">معرض الصور</a></li>
+                                    <li><a href="videos.html">الفيديوهات</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="contact.html">تواصل معنا</a></li>
             </ul>
             <div class="navbar__actions">
-                <a href="donate.html" class="btn btn--donate pulse-btn"><i class="fas fa-heart"></i> تبرع الآن</a>
-                <button class="navbar__toggle" id="navToggle">
+                <a href="donate.html" class="btn btn--donate pulse-btn">
+                    <i class="fas fa-heart"></i> تبرع الآن
+                </a>
+                <button class="navbar__toggle" id="navToggle" aria-label="القائمة">
                     <span></span><span></span><span></span>
                 </button>
             </div>

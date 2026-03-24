@@ -15,7 +15,10 @@
 .page-hero__bg {
     position: absolute;
     inset: 0;
-    background: url('../assets/images/bg-alaqsa.jpg') center/cover no-repeat;
+    background-image: url('../assets/images/bg-alaqsa-new.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 0.08;
     z-index: 0;
 }
@@ -399,7 +402,10 @@
 .cta-section__bg {
     position: absolute;
     inset: 0;
-    background: url('../assets/images/bg-alaqsa.jpg') center/cover no-repeat;
+    background-image: url('../assets/images/bg-alaqsa-new.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 0.06;
 }
 

@@ -32,11 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---- HERO SWIPER ----
     new Swiper('.hero-swiper', {
-        loop: true, speed: 900,
+        loop: true, speed: 1200,
         autoplay: { delay: 5000, disableOnInteraction: false },
-        parallax: true, effect: 'fade', fadeEffect: { crossFade: true },
+        effect: 'fade', fadeEffect: { crossFade: true },
         pagination: { el: '.hero-swiper .swiper-pagination', clickable: true },
-        navigation: { nextEl: '.hero-swiper .swiper-button-next', prevEl: '.hero-swiper .swiper-button-prev' },
     });
 
     // ---- CONFERENCES SWIPER ----
@@ -77,14 +76,31 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', toggleNav);
     overlay.addEventListener('click', toggleNav);
 
-    // Mobile dropdowns
-    document.querySelectorAll('.navbar__menu .has-dropdown > a').forEach(link => {
+    // Mobile mega menu toggle
+    document.querySelectorAll('.navbar__menu .has-mega > a').forEach(link => {
         link.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) { e.preventDefault(); link.parentElement.classList.toggle('open'); }
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const parent = link.parentElement;
+                // Close other open megas
+                document.querySelectorAll('.has-mega.open').forEach(el => {
+                    if (el !== parent) el.classList.remove('open');
+                });
+                parent.classList.toggle('open');
+            }
         });
     });
-    document.querySelectorAll('.navbar__menu a[href^="#"]').forEach(link => {
-        link.addEventListener('click', () => { if (navMenu.classList.contains('active')) toggleNav(); });
+    // Close mobile nav on link click
+    document.querySelectorAll('.navbar__menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active') && !link.parentElement.classList.contains('has-mega')) toggleNav();
+        });
+    });
+    // Close mega menus on link click inside mega
+    document.querySelectorAll('.mega-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) toggleNav();
+        });
     });
 
     // ---- ACTIVE NAV ON SCROLL ----
@@ -101,16 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-20% 0px -70% 0px' });
     sections.forEach(s => navObserver.observe(s));
 
-    // ---- DONATE TOGGLE (ONE-TIME / MONTHLY) ----
-    document.querySelectorAll('.donate-toggle__btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.donate-toggle__btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-        });
-    });
-
-    // ---- DONATION AMOUNTS ----
-    const amountBtns = document.querySelectorAll('.amount-btn');
+    // ---- DONATION STRIP AMOUNTS ----
+    const amountPills = document.querySelectorAll('.strip-pill');
     const customAmount = document.getElementById('customAmount');
     const donateImpact = document.getElementById('donateImpact');
 
@@ -120,27 +128,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    amountBtns.forEach(btn => {
+    amountPills.forEach(btn => {
         btn.addEventListener('click', () => {
-            amountBtns.forEach(b => b.classList.remove('active'));
+            amountPills.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            customAmount.value = btn.dataset.amount;
+            if (customAmount) customAmount.value = btn.dataset.amount;
             updateImpact(btn.dataset.amount, btn.dataset.impact);
         });
     });
 
-    customAmount.addEventListener('input', () => {
-        amountBtns.forEach(b => b.classList.remove('active'));
-        if (donateImpact && customAmount.value) {
-            donateImpact.innerHTML = `<i class="fas fa-lightbulb"></i><span>تبرعك بـ $${customAmount.value} سيصنع فرقاً حقيقياً</span>`;
-        }
-    });
+    if (customAmount) {
+        customAmount.addEventListener('input', () => {
+            amountPills.forEach(b => b.classList.remove('active'));
+            if (donateImpact && customAmount.value) {
+                donateImpact.innerHTML = `<i class="fas fa-lightbulb"></i><span>تبرعك بـ $${customAmount.value} سيصنع فرقاً حقيقياً</span>`;
+            }
+        });
+    }
 
     // Donate button
-    document.getElementById('donateBtn').addEventListener('click', () => {
-        const amount = customAmount.value || document.querySelector('.amount-btn.active')?.dataset.amount || '50';
-        showModal('شكراً لتبرعك!', `سيتم تحويلك لصفحة الدفع بمبلغ $${amount}`);
-    });
+    const donateBtn = document.getElementById('donateBtn');
+    if (donateBtn) {
+        donateBtn.addEventListener('click', () => {
+            const amount = (customAmount && customAmount.value) || document.querySelector('.strip-pill.active')?.dataset.amount || '50';
+            showModal('شكراً لتبرعك!', `سيتم تحويلك لصفحة الدفع بمبلغ $${amount}`);
+        });
+    }
 
     // ---- STATS COUNTER + RINGS ----
     const statsObserver = new IntersectionObserver((entries) => {
@@ -222,23 +235,68 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- FORMS ----
-    const volunteerForm = document.getElementById('volunteerForm');
-    if (volunteerForm) {
-        volunteerForm.addEventListener('submit', (e) => {
+    // ---- FORM VALIDATION + SUBMISSION ----
+    function validateField(input) {
+        const group = input.closest('.form-group');
+        if (!group) return true;
+        const isRequired = input.hasAttribute('required');
+        const val = input.value.trim();
+        if (isRequired && !val) {
+            group.classList.add('has-error');
+            group.classList.remove('is-valid');
+            return false;
+        }
+        if (input.type === 'email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+            group.classList.add('has-error');
+            group.classList.remove('is-valid');
+            return false;
+        }
+        group.classList.remove('has-error');
+        if (val) group.classList.add('is-valid');
+        return true;
+    }
+
+    document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
+        input.addEventListener('blur', () => validateField(input));
+        input.addEventListener('input', () => {
+            const g = input.closest('.form-group');
+            if (g && g.classList.contains('has-error')) validateField(input);
+        });
+    });
+
+    function handleFormSubmit(form, btn, successTitle, successMsg) {
+        if (!form || !btn) return;
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            showModal('تم إرسال طلبك بنجاح!', 'شكراً لرغبتك في التطوع معنا. سنتواصل معك قريباً.');
-            volunteerForm.reset();
+            let valid = true;
+            form.querySelectorAll('input, textarea, select').forEach(input => {
+                if (!validateField(input)) valid = false;
+            });
+            if (!valid) return;
+            btn.classList.add('is-loading');
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.classList.remove('is-loading');
+                btn.disabled = false;
+                showModal(successTitle, successMsg);
+                form.reset();
+                form.querySelectorAll('.form-group').forEach(g => g.classList.remove('is-valid'));
+            }, 1200);
         });
     }
-    const contactForm = document.querySelector('.contact__form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            showModal('تم إرسال رسالتك!', 'شكراً لتواصلك معنا. سنرد عليك في أقرب وقت.');
-            contactForm.reset();
-        });
-    }
+
+    handleFormSubmit(
+        document.getElementById('volunteerForm'),
+        document.getElementById('volSubmitBtn'),
+        'تم إرسال طلبك بنجاح!',
+        'شكراً لرغبتك في التطوع معنا. سنتواصل معك قريباً.'
+    );
+    handleFormSubmit(
+        document.getElementById('contactForm'),
+        document.getElementById('ctSubmitBtn'),
+        'تم إرسال رسالتك!',
+        'شكراً لتواصلك معنا. سنرد عليك في أقرب وقت.'
+    );
     const newsletter = document.querySelector('.footer__newsletter');
     if (newsletter) {
         newsletter.addEventListener('submit', (e) => {
